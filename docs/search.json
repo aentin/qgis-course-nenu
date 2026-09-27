@@ -8,5 +8,25 @@
     "crumbs": [
       "Home"
     ]
+  },
+  {
+    "objectID": "ex1_MapSymbol.html",
+    "href": "ex1_MapSymbol.html",
+    "title": "Exercise 1. Map Symbolization",
+    "section": "",
+    "text": "Objectives\n\nQGIS interface;\nvector symbology;\nraster symbology;\nmap layout.\n\n\n\nKey steps\n\nCreate a new user profile;\nCreate a new project;\nAdd vector data;\nSymbolize data;\n\nSingle symbols;\nCategorized symbols;\n\nEnable labels;\nChange map projection;\nCreate map layout;\n\nAdd map;\nFix layers for map;\nAdd legend;\nAdd scalebar;\nAdd author info;\n\nReturn to main QGIS window;\n\nToggle off layers;\n\nAdd raster data;\nSymbolize raster data;\nCreate a copy of layout;\nExport layouts to external formats.\n\n\n\nScreenshots and additional explanations\n\nCreating a new user profile\nUser profiles allow for quick switching between settings. Create a new profile and switch its language to English. Your default profile will keep your original language.\n\n\n\nQGIS interface\nFour main elements:\n\nMap frame (now empty)\nToolbars (upper part)\nBrowser panel (left side, up)\nLayers panel (left side, down)\n\n\n\n\nCreating a project\nPress “Project” – “New” or Ctrl+N. Save project to the location where your data are stored.\n\n\nAdd layers to project\nLayers may be added by:\n\nDrag&drop from Browser panel.\nDrag&drop from Windows Explorer / Finder.\nVia Data source manager toolbar.\n\n\n\n\nManage layer symbology\nSymbology is set to a layer. To access symbology settings, double click a layer in a “Layers” panel (or press right mouse button and select “Properties”), then find and click “Symbology” on the left side of the Properties window.\n\nYou can choose one of the default symbols or create your own by customizing fill, outline and other properties.\nThe layer symbol could itself consist of multiple layers. To add a symbol layer, press “+” button at the upper-left corner.\nBy default, all features in the layer are painted in a same symbols. You can also change symbol behaviour to “Categorized”, “Graduated”, and other variants.\n\n\n\n\nManage labels\nLabels are usually generated from feature attributes. To access labels settings, double click a layer in a “Layers” panel (or press right mouse button and select “Properties”), then find and click “Labels” on the left side of the Properties window. Change default setting (“No labels”) to “Single labels” to enable label generation\n\n\n\n\n\nRelated pages from the QGIS user guide\nPlease note that these materials could be: 1) outdated; 2) sometimes inavailable from Russia.\n\nQGIS Graphical user interface\nUser profiles\nVector symbology properties\nRaster symbology properties\nLayout\n\n\n\nRelated pages from the QGIS training manual\nPlease note that these materials could be: 1) outdated; 2) sometimes inavailable from Russia.\n\nBasic map with vector data\nVector symbology and labels\nRaster symbology\nLayout (map composer)",
+    "crumbs": [
+      "Exercise 1. Map Symbolization"
+    ]
+  },
+  {
+    "objectID": "ex1_MapSymbol.html#objectives",
+    "href": "ex1_MapSymbol.html#objectives",
+    "title": "Exercise 1. Map Symbolization",
+    "section": "",
+    "text": "QGIS interface;\nvector data symbology;\nraster data symbology;\nmap layout.",
+    "crumbs": [
+      "Exercise 1. Map Symbolization"
+    ]
   }
 ]

@@ -121,8 +121,18 @@ ul.task-list li input[type="checkbox"] {
 </nav>
 <div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
 <!-- margin-sidebar -->
-    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar zindex-bottom">
-        
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">On this page</h2>
+   
+  <ul>
+  <li><a href="#objectives" id="toc-objectives" class="nav-link active" data-scroll-target="#objectives">Objectives</a></li>
+  <li><a href="#key-steps" id="toc-key-steps" class="nav-link" data-scroll-target="#key-steps">Key steps</a></li>
+  <li><a href="#screenshots-and-additional-explanations" id="toc-screenshots-and-additional-explanations" class="nav-link" data-scroll-target="#screenshots-and-additional-explanations">Screenshots and additional explanations</a></li>
+  <li><a href="#related-pages-from-the-qgis-user-guide" id="toc-related-pages-from-the-qgis-user-guide" class="nav-link" data-scroll-target="#related-pages-from-the-qgis-user-guide">Related pages from the QGIS user guide</a></li>
+  <li><a href="#related-pages-from-the-qgis-training-manual" id="toc-related-pages-from-the-qgis-training-manual" class="nav-link" data-scroll-target="#related-pages-from-the-qgis-training-manual">Related pages from the QGIS training manual</a></li>
+  </ul>
+</nav>
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
@@ -146,8 +156,118 @@ ul.task-list li input[type="checkbox"] {
 </header>
 
 
+<section id="objectives" class="level3">
+<h3 class="anchored" data-anchor-id="objectives">Objectives</h3>
+<ul>
+<li>QGIS interface;</li>
+<li>vector symbology;</li>
+<li>raster symbology;</li>
+<li>map layout.</li>
+</ul>
+</section>
+<section id="key-steps" class="level3">
+<h3 class="anchored" data-anchor-id="key-steps">Key steps</h3>
+<ul>
+<li>Create a new user profile;</li>
+<li>Create a new project;</li>
+<li>Add vector data;</li>
+<li>Symbolize data;
+<ul>
+<li>Single symbols;</li>
+<li>Categorized symbols;</li>
+</ul></li>
+<li>Enable labels;</li>
+<li>Change map projection;</li>
+<li>Create map layout;
+<ul>
+<li>Add map;</li>
+<li>Fix layers for map;</li>
+<li>Add legend;</li>
+<li>Add scalebar;</li>
+<li>Add author info;</li>
+</ul></li>
+<li>Return to main QGIS window;
+<ul>
+<li>Toggle off layers;</li>
+</ul></li>
+<li>Add raster data;</li>
+<li>Symbolize raster data;</li>
+<li>Create a copy of layout;</li>
+<li>Export layouts to external formats.</li>
+</ul>
+</section>
+<section id="screenshots-and-additional-explanations" class="level3">
+<h3 class="anchored" data-anchor-id="screenshots-and-additional-explanations">Screenshots and additional explanations</h3>
+<section id="creating-a-new-user-profile" class="level4">
+<h4 class="anchored" data-anchor-id="creating-a-new-user-profile">Creating a new user profile</h4>
+<p>User profiles allow for quick switching between settings. Create a new profile and switch its language to English. Your default profile will keep your original language.</p>
+<p><img src="images/Ex01_MapLayout/user_profiles.png" class="img-fluid"></p>
+</section>
+<section id="qgis-interface" class="level4">
+<h4 class="anchored" data-anchor-id="qgis-interface">QGIS interface</h4>
+<p>Four main elements:</p>
+<ol type="1">
+<li>Map frame (now empty)</li>
+<li>Toolbars (upper part)</li>
+<li>Browser panel (left side, up)</li>
+<li>Layers panel (left side, down)</li>
+</ol>
+<p><img src="images/Ex01_MapLayout/qgis_blank_project.png" class="img-fluid"></p>
+</section>
+<section id="creating-a-project" class="level4">
+<h4 class="anchored" data-anchor-id="creating-a-project">Creating a project</h4>
+<p>Press “Project” – “New” or <code>Ctrl+N</code>. Save project to the location where your data are stored.</p>
+</section>
+<section id="add-layers-to-project" class="level4">
+<h4 class="anchored" data-anchor-id="add-layers-to-project">Add layers to project</h4>
+<p>Layers may be added by:</p>
+<ol type="1">
+<li>Drag&amp;drop from Browser panel.</li>
+<li>Drag&amp;drop from Windows Explorer / Finder.</li>
+<li>Via Data source manager toolbar.</li>
+</ol>
+<p><img src="images/Ex01_MapLayout/add_layers.png" class="img-fluid"></p>
+</section>
+<section id="manage-layer-symbology" class="level4">
+<h4 class="anchored" data-anchor-id="manage-layer-symbology">Manage layer symbology</h4>
+<p>Symbology is set to a layer. To access symbology settings, double click a layer in a “Layers” panel (or press right mouse button and select “Properties”), then find and click “Symbology” on the left side of the Properties window.</p>
+<p><img src="images/Ex01_MapLayout/symbology.png" class="img-fluid"></p>
+<p>You can choose one of the default symbols or create your own by customizing fill, outline and other properties.</p>
+<p>The layer symbol could itself consist of multiple layers. To add a symbol layer, press “+” button at the upper-left corner.</p>
+<p>By default, all features in the layer are painted in a same symbols. You can also change symbol behaviour to “Categorized”, “Graduated”, and other variants.</p>
+<p><img src="images/Ex01_MapLayout/categorized.png" class="img-fluid"></p>
+<p><img src="images/Ex01_MapLayout/stylized.png" class="img-fluid"></p>
+</section>
+<section id="manage-labels" class="level4">
+<h4 class="anchored" data-anchor-id="manage-labels">Manage labels</h4>
+<p>Labels are usually generated from feature attributes. To access labels settings, double click a layer in a “Layers” panel (or press right mouse button and select “Properties”), then find and click “Labels” on the left side of the Properties window. Change default setting (“No labels”) to “Single labels” to enable label generation</p>
+<p><img src="images/Ex01_MapLayout/label_settings.png" class="img-fluid"></p>
+<p><img src="images/Ex01_MapLayout/label_result.png" class="img-fluid"></p>
+</section>
+</section>
+<section id="related-pages-from-the-qgis-user-guide" class="level3">
+<h3 class="anchored" data-anchor-id="related-pages-from-the-qgis-user-guide">Related pages from the QGIS user guide</h3>
+<p>Please note that these materials could be: 1) outdated; 2) sometimes inavailable from Russia.</p>
+<ul>
+<li><a href="https://docs.qgis.org/3.44/en/docs/user_manual/introduction/qgis_gui.html">QGIS Graphical user interface</a></li>
+<li><a href="https://docs.qgis.org/3.44/en/docs/user_manual/introduction/qgis_configuration.html#working-with-user-profiles">User profiles</a></li>
+<li><a href="https://docs.qgis.org/3.44/en/docs/user_manual/working_with_vector/vector_properties.html#symbology-properties">Vector symbology properties</a></li>
+<li><a href="https://docs.qgis.org/3.44/en/docs/user_manual/working_with_raster/raster_properties.html#symbology-properties">Raster symbology properties</a></li>
+<li><a href="https://docs.qgis.org/3.44/en/docs/user_manual/print_layout/index.html">Layout</a></li>
+</ul>
+</section>
+<section id="related-pages-from-the-qgis-training-manual" class="level3">
+<h3 class="anchored" data-anchor-id="related-pages-from-the-qgis-training-manual">Related pages from the QGIS training manual</h3>
+<p>Please note that these materials could be: 1) outdated; 2) sometimes inavailable from Russia.</p>
+<ul>
+<li><a href="https://docs.qgis.org/3.44/en/docs/training_manual/basic_map/index.html">Basic map with vector data</a></li>
+<li><a href="https://docs.qgis.org/3.44/en/docs/training_manual/vector_classification/index.html">Vector symbology and labels</a></li>
+<li><a href="https://docs.qgis.org/3.44/en/docs/training_manual/rasters/changing_symbology.html">Raster symbology</a></li>
+<li><a href="https://docs.qgis.org/3.44/en/docs/training_manual/map_composer/map_composer.html">Layout (map composer)</a></li>
+</ul>
 
 
+</section>
 
 </main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
