@@ -1,0 +1,11 @@
+---
+title: "QGIS Course for NENU students"
+---
+
+Welcome to the main page of the QGIS practical course.
+
+This course is designed for trainee students from NENU.
+
+Please note that the exercises in the course do not imply step-by-step instructions. Instead, only key operations and essential screenshots are provided for each task.
+
+The full list of exercises will be provided in the left-hand section of this page. To get started, click on the exercise link.

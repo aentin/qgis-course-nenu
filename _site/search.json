@@ -1,0 +1,22 @@
+[
+  {
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "QGIS Course for NENU students",
+    "section": "",
+    "text": "Welcome to the main page of the QGIS practical course.\nThis course is designed for trainee students from NENU.\nPlease note that the exercises in the course do not imply step-by-step instructions. Instead, only key operations and essential screenshots are provided for each task.\nThe full list of exercises will be provided in the left-hand section of this page. To get started, click on the exercise link.",
+    "crumbs": [
+      "Home"
+    ]
+  },
+  {
+    "objectID": "about.html",
+    "href": "about.html",
+    "title": "About",
+    "section": "",
+    "text": "About this site",
+    "crumbs": [
+      "About"
+    ]
+  }
+]
