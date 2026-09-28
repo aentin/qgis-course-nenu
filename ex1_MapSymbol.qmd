@@ -123,6 +123,30 @@ To create a print layout, navigate to "Project" – "New print layout" or press 
 
 To add new elements on layout, move elements and element contents, use toolbox on the left.
 
+![](images/Ex01_MapLayout/layout_map.png)
+
+Most of the elements' settings are available from the "Item Properties" panel.
+
+Important settings for map are: 
+
+- lock layers;
+- grids (allows to draw geographical or projected grid);
+- size and position.
+
+Map layout may be exported to PNG image, SVG or PDF.
+
+If you have created multiple layouts, they are available from main QGIS window ("Project" – "Layout manager"). Each layout opens in a separate window.
+
+#### Manage raster layer symbology
+
+Raster layer symbology is different from vector symbology. It is also accessible via "Properties" window. Default setting is 'Singleband gray', other available variants are 'Singleband pseudocolor', 'Hillshade' and others.
+
+![](images/Ex01_MapLayout/raster_singleband_gray.png)
+
+![](images/Ex01_MapLayout/raster_singleband_pseudocolor.png)
+
+![](images/Ex01_MapLayout/raster_hillshade.png)
+
 ### Related pages from the QGIS user guide
 
 Please note that these materials could be: 1) outdated; 2) sometimes inavailable from Russia.
