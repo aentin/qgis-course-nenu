@@ -228,8 +228,8 @@ ul.task-list li input[type="checkbox"] {
 </ol>
 <p><img src="images/Ex01_MapLayout/add_layers.png" class="img-fluid"></p>
 </section>
-<section id="manage-layer-symbology" class="level4">
-<h4 class="anchored" data-anchor-id="manage-layer-symbology">Manage layer symbology</h4>
+<section id="manage-vector-layer-symbology" class="level4">
+<h4 class="anchored" data-anchor-id="manage-vector-layer-symbology">Manage vector layer symbology</h4>
 <p>Symbology is set to a layer. To access symbology settings, double click a layer in a “Layers” panel (or press right mouse button and select “Properties”), then find and click “Symbology” on the left side of the Properties window.</p>
 <p><img src="images/Ex01_MapLayout/symbology.png" class="img-fluid"></p>
 <p>You can choose one of the default symbols or create your own by customizing fill, outline and other properties.</p>
@@ -243,6 +243,27 @@ ul.task-list li input[type="checkbox"] {
 <p>Labels are usually generated from feature attributes. To access labels settings, double click a layer in a “Layers” panel (or press right mouse button and select “Properties”), then find and click “Labels” on the left side of the Properties window. Change default setting (“No labels”) to “Single labels” to enable label generation</p>
 <p><img src="images/Ex01_MapLayout/label_settings.png" class="img-fluid"></p>
 <p><img src="images/Ex01_MapLayout/label_result.png" class="img-fluid"></p>
+</section>
+<section id="change-map-projection" class="level4">
+<h4 class="anchored" data-anchor-id="change-map-projection">Change map projection</h4>
+<p>To change map projection, press CRS button at the lower-right corner of the screen. Alternatively, go to “Project” — “Properties” — “CRS”.</p>
+<p><img src="images/Ex01_MapLayout/projection.png" class="img-fluid"></p>
+<p><img src="images/Ex01_MapLayout/projection_properties.png" class="img-fluid"></p>
+<p>This interface allows you to select any of the pre-defined CRS. You can also define your own CRS.</p>
+<p>To define your own CRS, choose “Settings” - “Custom projection…”</p>
+<p><img src="images/Ex01_MapLayout/projections_custom.png" class="img-fluid"></p>
+<p>In the “User defined CRS” window, create a new row, enter the name for your CRS and paste the definition in the desired format (WKT or PROJ).</p>
+<p><img src="images/Ex01_MapLayout/define_crs.png" class="img-fluid"></p>
+<p>Note that changing project CRS does not affect layers’ CRS! QGIS performs ‘on-the-fly’ transformation when displaying layers in different projections.</p>
+<p>Map window with changed projection will look as follows:</p>
+<p><img src="images/Ex01_MapLayout/projection_changed.png" class="img-fluid"></p>
+</section>
+<section id="print-layouts" class="level4">
+<h4 class="anchored" data-anchor-id="print-layouts">Print layouts</h4>
+<p>QGIS project supports multiple map layouts.</p>
+<p>To create a print layout, navigate to “Project” – “New print layout” or press <code>Ctrl+P</code>. A small prompt window will appear, enter your layout name here. A new print layout will be opened in a separate window.</p>
+<p><img src="images/Ex01_MapLayout/layout_blank.png" class="img-fluid"></p>
+<p>To add new elements on layout, move elements and element contents, use toolbox on the left.</p>
 </section>
 </section>
 <section id="related-pages-from-the-qgis-user-guide" class="level3">

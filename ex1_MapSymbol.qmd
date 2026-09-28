@@ -65,7 +65,7 @@ Layers may be added by:
 
 ![](images/Ex01_MapLayout/add_layers.png)
 
-#### Manage layer symbology
+#### Manage vector layer symbology
 
 Symbology is set to a layer. To access symbology settings, double click a layer in a "Layers" panel (or press right mouse button and select "Properties"), then find and click "Symbology" on the left side of the Properties window.
 
@@ -88,6 +88,40 @@ Labels are usually generated from feature attributes. To access labels settings,
 ![](images/Ex01_MapLayout/label_settings.png)
 
 ![](images/Ex01_MapLayout/label_result.png)
+
+#### Change map projection
+
+To change map projection, press CRS button at the lower-right corner of the screen. Alternatively, go to "Project" — "Properties" — "CRS".
+
+![](images/Ex01_MapLayout/projection.png)
+
+![](images/Ex01_MapLayout/projection_properties.png)
+
+This interface allows you to select any of the pre-defined CRS. You can also define your own CRS.
+
+To define your own CRS, choose "Settings" - "Custom projection..."
+
+![](images/Ex01_MapLayout/projections_custom.png)
+
+In the "User defined CRS" window, create a new row, enter the name for your CRS and paste the definition in the desired format (WKT or PROJ).
+
+![](images/Ex01_MapLayout/define_crs.png)
+
+Note that changing project CRS does not affect layers' CRS! QGIS performs 'on-the-fly' transformation when displaying layers in different projections.
+
+Map window with changed projection will look as follows:
+
+![](images/Ex01_MapLayout/projection_changed.png)
+
+#### Print layouts
+
+QGIS project supports multiple map layouts.
+
+To create a print layout, navigate to "Project" – "New print layout" or press `Ctrl+P`. A small prompt window will appear, enter your layout name here. A new print layout will be opened in a separate window.
+
+![](images/Ex01_MapLayout/layout_blank.png)
+
+To add new elements on layout, move elements and element contents, use toolbox on the left.
 
 ### Related pages from the QGIS user guide
 
