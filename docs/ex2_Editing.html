@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>Exercise 1. Map Symbolization – QGIS course</title>
+<title>Exercise 2. Creating vector objects – QGIS course</title>
 <style>
 /* Default styles provided by pandoc.
 ** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
@@ -87,7 +87,7 @@ ul.task-list li input[type="checkbox"] {
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./ex1_MapSymbol.html">Exercise 1. Map Symbolization</a></li></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./ex2_Editing.html">Exercise 2. Creating vector objects</a></li></ol></nav>
         <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
     </div>
@@ -112,13 +112,13 @@ ul.task-list li input[type="checkbox"] {
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./ex1_MapSymbol.html" class="sidebar-item-text sidebar-link active">
+  <a href="./ex1_MapSymbol.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Exercise 1. Map Symbolization</span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./ex2_Editing.html" class="sidebar-item-text sidebar-link">
+  <a href="./ex2_Editing.html" class="sidebar-item-text sidebar-link active">
  <span class="menu-text">Exercise 2. Creating vector objects</span></a>
   </div>
 </li>
@@ -134,7 +134,9 @@ ul.task-list li input[type="checkbox"] {
   <ul>
   <li><a href="#objectives" id="toc-objectives" class="nav-link active" data-scroll-target="#objectives">Objectives</a></li>
   <li><a href="#key-steps" id="toc-key-steps" class="nav-link" data-scroll-target="#key-steps">Key steps</a></li>
-  <li><a href="#screenshots-and-additional-explanations" id="toc-screenshots-and-additional-explanations" class="nav-link" data-scroll-target="#screenshots-and-additional-explanations">Screenshots and additional explanations</a></li>
+  <li><a href="#input-data-for-training" id="toc-input-data-for-training" class="nav-link" data-scroll-target="#input-data-for-training">Input data for training</a></li>
+  <li><a href="#screenshots-and-additional-information" id="toc-screenshots-and-additional-information" class="nav-link" data-scroll-target="#screenshots-and-additional-information">Screenshots and additional information</a></li>
+  <li><a href="#topographic-map-symbols" id="toc-topographic-map-symbols" class="nav-link" data-scroll-target="#topographic-map-symbols">Topographic map symbols</a></li>
   <li><a href="#related-pages-from-the-qgis-user-guide" id="toc-related-pages-from-the-qgis-user-guide" class="nav-link" data-scroll-target="#related-pages-from-the-qgis-user-guide">Related pages from the QGIS user guide</a></li>
   <li><a href="#related-pages-from-the-qgis-training-manual" id="toc-related-pages-from-the-qgis-training-manual" class="nav-link" data-scroll-target="#related-pages-from-the-qgis-training-manual">Related pages from the QGIS training manual</a></li>
   </ul>
@@ -145,7 +147,7 @@ ul.task-list li input[type="checkbox"] {
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">Exercise 1. Map Symbolization</h1>
+<h1 class="title">Exercise 2. Creating vector objects</h1>
 </div>
 
 
@@ -174,140 +176,138 @@ ul.task-list li input[type="checkbox"] {
 <section id="key-steps" class="level3">
 <h3 class="anchored" data-anchor-id="key-steps">Key steps</h3>
 <ul>
-<li>Create a new user profile;</li>
-<li>Create a new project;</li>
-<li>Add vector data;</li>
-<li>Symbolize data;
+<li>Create a GeoPackage file;</li>
+<li>Create a table in a GeoPackage file;</li>
+<li>Create point objects;</li>
+<li>Create polyline objects;</li>
+<li>Create polygon objects;</li>
+<li>Snapping and tracing;</li>
+<li>Advanced editing operations:
 <ul>
-<li>Single symbols;</li>
-<li>Categorized symbols;</li>
+<li>rings;</li>
+<li>parts;</li>
+<li>splitting and merging objects;</li>
+<li>etc.</li>
 </ul></li>
-<li>Enable labels;</li>
-<li>Change map projection;</li>
-<li>Create map layout;
-<ul>
-<li>Add map;</li>
-<li>Fix layers for map;</li>
-<li>Add legend;</li>
-<li>Add scalebar;</li>
-<li>Add author info;</li>
-</ul></li>
-<li>Return to main QGIS window;
-<ul>
-<li>Toggle off layers;</li>
-</ul></li>
-<li>Add raster data;</li>
-<li>Symbolize raster data;</li>
-<li>Create a copy of layout;</li>
-<li>Export layouts to external formats.</li>
+<li>(only if there is time left) Feature annotations.</li>
 </ul>
 </section>
-<section id="screenshots-and-additional-explanations" class="level3">
-<h3 class="anchored" data-anchor-id="screenshots-and-additional-explanations">Screenshots and additional explanations</h3>
-<section id="creating-a-new-user-profile" class="level4">
-<h4 class="anchored" data-anchor-id="creating-a-new-user-profile">Creating a new user profile</h4>
-<p>User profiles allow for quick switching between settings. Create a new profile and switch its language to English. Your default profile will keep your original language.</p>
-<p><img src="images/Ex01_MapLayout/user_profiles.png" class="img-fluid"></p>
+<section id="input-data-for-training" class="level3">
+<h3 class="anchored" data-anchor-id="input-data-for-training">Input data for training</h3>
+<p>A fragment of the Unified Electronic Cartographic Basemap of Russian Federation (rus. Единая электронная картографическая основа, ЕЭКО, officially transliterated as EEKO).</p>
+<p><img src="images/Ex02_Editing/01_EEKO.png" class="img-fluid"></p>
 </section>
-<section id="qgis-interface" class="level4">
-<h4 class="anchored" data-anchor-id="qgis-interface">QGIS interface</h4>
-<p>Four main elements:</p>
-<ol type="1">
-<li>Map frame (now empty)</li>
-<li>Toolbars (upper part)</li>
-<li>Browser panel (left side, up)</li>
-<li>Layers panel (left side, down)</li>
-</ol>
-<p><img src="images/Ex01_MapLayout/qgis_blank_project.png" class="img-fluid"></p>
+<section id="screenshots-and-additional-information" class="level3">
+<h3 class="anchored" data-anchor-id="screenshots-and-additional-information">Screenshots and additional information</h3>
+<section id="create-a-new-geopackage" class="level4">
+<h4 class="anchored" data-anchor-id="create-a-new-geopackage">Create a new GeoPackage</h4>
+<p>To create a new GeoPackage, toggle <em>New GeoPackage Layer</em> button on the Data Source Manager toolbar, or select “Layer” – “Create Layer…” – “New GeoPackage layer”, or press <code>Ctrl+Shift+N</code>.</p>
+<p><img src="images/Ex02_Editing/02_NewGeoPackage.png" class="img-fluid"></p>
+<p>Enter file name, table name, select geometry type and CRS. In the “New field” block, enter a field name and select its type, then press “Add to Fields list”. Repeat for other required fields.</p>
 </section>
-<section id="creating-a-project" class="level4">
-<h4 class="anchored" data-anchor-id="creating-a-project">Creating a project</h4>
-<p>Press “Project” – “New” or <code>Ctrl+N</code>. Save project to the location where your data are stored.</p>
+<section id="create-a-new-table-in-existing-geopackage" class="level4">
+<h4 class="anchored" data-anchor-id="create-a-new-table-in-existing-geopackage">Create a new table in existing GeoPackage</h4>
+<p>To add a new table into the existing GeoPackage, find it in the Browser panel, then press right mouse button and select “New Table…”</p>
+<p><img src="images/Ex02_Editing/03_NewTable0.png" class="img-fluid"></p>
+<p>The interface for creating a new table contains the same settings as the interface for creating a new database (GeoPackage), but they are organized in a somewhat different way.</p>
+<p><img src="images/Ex02_Editing/04_NewTable1.png" class="img-fluid"></p>
 </section>
-<section id="add-layers-to-project" class="level4">
-<h4 class="anchored" data-anchor-id="add-layers-to-project">Add layers to project</h4>
-<p>Layers may be added by:</p>
-<ol type="1">
-<li>Drag&amp;drop from Browser panel.</li>
-<li>Drag&amp;drop from Windows Explorer / Finder.</li>
-<li>Via Data source manager toolbar.</li>
-</ol>
-<p><img src="images/Ex01_MapLayout/add_layers.png" class="img-fluid"></p>
-</section>
-<section id="manage-vector-layer-symbology" class="level4">
-<h4 class="anchored" data-anchor-id="manage-vector-layer-symbology">Manage vector layer symbology</h4>
-<p>Symbology is set to a layer. To access symbology settings, double click a layer in a “Layers” panel (or press right mouse button and select “Properties”), then find and click “Symbology” on the left side of the Properties window.</p>
-<p><img src="images/Ex01_MapLayout/symbology.png" class="img-fluid"></p>
-<p>You can choose one of the default symbols or create your own by customizing fill, outline and other properties.</p>
-<p>The layer symbol could itself consist of multiple layers. To add a symbol layer, press “+” button at the upper-left corner.</p>
-<p>By default, all features in the layer are painted in a same symbols. You can also change symbol behaviour to “Categorized”, “Graduated”, and other variants.</p>
-<p><img src="images/Ex01_MapLayout/categorized.png" class="img-fluid"></p>
-<p><img src="images/Ex01_MapLayout/stylized.png" class="img-fluid"></p>
-</section>
-<section id="manage-labels" class="level4">
-<h4 class="anchored" data-anchor-id="manage-labels">Manage labels</h4>
-<p>Labels are usually generated from feature attributes. To access labels settings, double click a layer in a “Layers” panel (or press right mouse button and select “Properties”), then find and click “Labels” on the left side of the Properties window. Change default setting (“No labels”) to “Single labels” to enable label generation</p>
-<p><img src="images/Ex01_MapLayout/label_settings.png" class="img-fluid"></p>
-<p><img src="images/Ex01_MapLayout/label_result.png" class="img-fluid"></p>
-</section>
-<section id="change-map-projection" class="level4">
-<h4 class="anchored" data-anchor-id="change-map-projection">Change map projection</h4>
-<p>To change map projection, press CRS button at the lower-right corner of the screen. Alternatively, go to “Project” — “Properties” — “CRS”.</p>
-<p><img src="images/Ex01_MapLayout/projection.png" class="img-fluid"></p>
-<p><img src="images/Ex01_MapLayout/projection_properties.png" class="img-fluid"></p>
-<p>This interface allows you to select any of the pre-defined CRS. You can also define your own CRS.</p>
-<p>To define your own CRS, choose “Settings” - “Custom projection…”</p>
-<p><img src="images/Ex01_MapLayout/projections_custom.png" class="img-fluid"></p>
-<p>In the “User defined CRS” window, create a new row, enter the name for your CRS and paste the definition in the desired format (WKT or PROJ).</p>
-<p><img src="images/Ex01_MapLayout/define_crs.png" class="img-fluid"></p>
-<p>Note that changing project CRS does not affect layers’ CRS! QGIS performs ‘on-the-fly’ transformation when displaying layers in different projections.</p>
-<p>Map window with changed projection will look as follows:</p>
-<p><img src="images/Ex01_MapLayout/projection_changed.png" class="img-fluid"></p>
-</section>
-<section id="print-layouts" class="level4">
-<h4 class="anchored" data-anchor-id="print-layouts">Print layouts</h4>
-<p>QGIS project supports multiple map layouts.</p>
-<p>To create a print layout, navigate to “Project” – “New print layout” or press <code>Ctrl+P</code>. A small prompt window will appear, enter your layout name here. A new print layout will be opened in a separate window.</p>
-<p><img src="images/Ex01_MapLayout/layout_blank.png" class="img-fluid"></p>
-<p>To add new elements on layout, move elements and element contents, use toolbox on the left.</p>
-<p><img src="images/Ex01_MapLayout/layout_map.png" class="img-fluid"></p>
-<p>Most of the elements’ settings are available from the “Item Properties” panel.</p>
-<p>Important settings for map are:</p>
+<section id="creating-and-editing-data" class="level4">
+<h4 class="anchored" data-anchor-id="creating-and-editing-data">Creating and editing data</h4>
+<p>There are three principal toolbars to create and edit spatial data:</p>
 <ul>
-<li>lock layers;</li>
-<li>grids (allows to draw geographical or projected grid);</li>
-<li>size and position.</li>
+<li>Digitizing toolbar: <img src="images/Ex02_Editing/05_DigitizingToolbar.png" class="img-fluid"></li>
+<li>Advanced digitizing toolbar: <img src="images/Ex02_Editing/06_AdvancedDigitizingToolbar.png" class="img-fluid"></li>
+<li>Snapping toolbar: <img src="images/Ex02_Editing/07_SnappingToolbar.png" class="img-fluid"></li>
 </ul>
-<p>Map layout may be exported to PNG image, SVG or PDF.</p>
-<p>If you have created multiple layouts, they are available from main QGIS window (“Project” – “Layout manager”). Each layout opens in a separate window.</p>
 </section>
-<section id="manage-raster-layer-symbology" class="level4">
-<h4 class="anchored" data-anchor-id="manage-raster-layer-symbology">Manage raster layer symbology</h4>
-<p>Raster layer symbology is different from vector symbology. It is also accessible via “Properties” window. Default setting is ‘Singleband gray’, other available variants are ‘Singleband pseudocolor’, ‘Hillshade’ and others.</p>
-<p><img src="images/Ex01_MapLayout/raster_singleband_gray.png" class="img-fluid"></p>
-<p><img src="images/Ex01_MapLayout/raster_singleband_pseudocolor.png" class="img-fluid"></p>
-<p><img src="images/Ex01_MapLayout/raster_hillshade.png" class="img-fluid"></p>
 </section>
+<section id="topographic-map-symbols" class="level3">
+<h3 class="anchored" data-anchor-id="topographic-map-symbols">Topographic map symbols</h3>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 38%">
+<col style="width: 61%">
+</colgroup>
+<thead>
+<tr class="header">
+<th style="text-align: center;">Picture</th>
+<th>Explanation</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: center;"><img src="images/Ex02_Editing/ElevationMark.png" class="img-fluid"></td>
+<td>Elevation mark</td>
+</tr>
+<tr class="even">
+<td style="text-align: center;"><img src="images/Ex02_Editing/Sea.png" class="img-fluid"></td>
+<td>Sea</td>
+</tr>
+<tr class="odd">
+<td style="text-align: center;"><img src="images/Ex02_Editing/Rivers.png" class="img-fluid"> <img src="images/Ex02_Editing/Rivers1.png" class="img-fluid"></td>
+<td>Rivers</td>
+</tr>
+<tr class="even">
+<td style="text-align: center;"><img src="images/Ex02_Editing/Settlement.png" class="img-fluid"></td>
+<td><em>[grey polygons]</em> Settlements (each polygon stands for a group of buildings)</td>
+</tr>
+<tr class="odd">
+<td style="text-align: center;"><img src="images/Ex02_Editing/Railroad.png" class="img-fluid"></td>
+<td>Railroad</td>
+</tr>
+<tr class="even">
+<td style="text-align: center;"><img src="images/Ex02_Editing/RailwayStation.png" class="img-fluid"></td>
+<td>Railway station</td>
+</tr>
+<tr class="odd">
+<td style="text-align: center;"><img src="images/Ex02_Editing/Roads1.png" class="img-fluid"> <img src="images/Ex02_Editing/Roads2.png" class="img-fluid"> <img src="images/Ex02_Editing/Roads3.png" class="img-fluid"></td>
+<td>Roads of different classes and their characteristics (<em>see explanation below</em>)</td>
+</tr>
+<tr class="even">
+<td style="text-align: center;"><img src="images/Ex02_Editing/Contours.png" class="img-fluid"></td>
+<td>Elevation contours (brown lines) and forest (dark green fill)</td>
+</tr>
+<tr class="odd">
+<td style="text-align: center;"><img src="images/Ex02_Editing/Shrub.png" class="img-fluid"></td>
+<td>Shrub (light green fill and round-shaped markers)</td>
+</tr>
+<tr class="even">
+<td style="text-align: center;"><img src="images/Ex02_Editing/Grass.png" class="img-fluid"></td>
+<td>Grass</td>
+</tr>
+<tr class="odd">
+<td style="text-align: center;"><img src="images/Ex02_Editing/PowerLines.png" class="img-fluid"></td>
+<td>Power lines</td>
+</tr>
+</tbody>
+</table>
+<p>Road characteristics:</p>
+<ul>
+<li>Orange: major roads</li>
+<li>White: other paved roads</li>
+<li>Dashed line: unpaved road</li>
+<li>8(11)A means:
+<ul>
+<li>8: roadway width</li>
+<li>11: full road width (roadway with roadsides)</li>
+<li>A: material (Asphalt)</li>
+</ul></li>
+</ul>
 </section>
 <section id="related-pages-from-the-qgis-user-guide" class="level3">
 <h3 class="anchored" data-anchor-id="related-pages-from-the-qgis-user-guide">Related pages from the QGIS user guide</h3>
 <p>Please note that these materials could be: 1) outdated; 2) sometimes inavailable from Russia.</p>
 <ul>
-<li><a href="https://docs.qgis.org/3.44/en/docs/user_manual/introduction/qgis_gui.html">QGIS Graphical user interface</a></li>
-<li><a href="https://docs.qgis.org/3.44/en/docs/user_manual/introduction/qgis_configuration.html#working-with-user-profiles">User profiles</a></li>
-<li><a href="https://docs.qgis.org/3.44/en/docs/user_manual/working_with_vector/vector_properties.html#symbology-properties">Vector symbology properties</a></li>
-<li><a href="https://docs.qgis.org/3.44/en/docs/user_manual/working_with_raster/raster_properties.html#symbology-properties">Raster symbology properties</a></li>
-<li><a href="https://docs.qgis.org/3.44/en/docs/user_manual/print_layout/index.html">Layout</a></li>
+<li><a href="https://docs.qgis.org/4.2/en/docs/user_manual/map_views/map_view.html#feature-annotations">Feature Annotations</a></li>
 </ul>
 </section>
 <section id="related-pages-from-the-qgis-training-manual" class="level3">
 <h3 class="anchored" data-anchor-id="related-pages-from-the-qgis-training-manual">Related pages from the QGIS training manual</h3>
 <p>Please note that these materials could be: 1) outdated; 2) sometimes inavailable from Russia.</p>
 <ul>
-<li><a href="https://docs.qgis.org/3.44/en/docs/training_manual/basic_map/index.html">Basic map with vector data</a></li>
-<li><a href="https://docs.qgis.org/3.44/en/docs/training_manual/vector_classification/index.html">Vector symbology and labels</a></li>
-<li><a href="https://docs.qgis.org/3.44/en/docs/training_manual/rasters/changing_symbology.html">Raster symbology</a></li>
-<li><a href="https://docs.qgis.org/3.44/en/docs/training_manual/map_composer/map_composer.html">Layout (map composer)</a></li>
+<li><a href="https://docs.qgis.org/4.2/en/docs/training_manual/create_vector_data/create_new_vector.html">Creating a New Vector Dataset</a></li>
+<li><a href="https://docs.qgis.org/4.2/en/docs/training_manual/create_vector_data/topo_editing.html">Feature Topology</a></li>
 </ul>
 
 

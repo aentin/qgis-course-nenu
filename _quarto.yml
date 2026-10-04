@@ -12,6 +12,8 @@ website:
         text: Home
       - href: ex1_MapSymbol.qmd
         text: Exercise 1. Map Symbolization
+      - href: ex2_Editing.qmd
+        text: Exercise 2. Creating vector objects
 
 format:
   html:
