@@ -4,10 +4,12 @@ title: "Exercise 2. Creating vector objects"
 
 ### Objectives
 
-- QGIS interface;
-- vector symbology;
-- raster symbology;
-- map layout.
+- Create new GeoPackage;
+- Create new tables in existing GeoPackage;
+- Create vector objects;
+- modify vector objects;
+- snapping and tracing;
+- modify attributes.
 
 ### Key steps
 
