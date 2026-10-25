@@ -16,6 +16,8 @@ website:
         text: Exercise 2. Creating vector objects
       - href: ex3_RasterGeoreferencing.qmd
         text: Exercise 3. Raster Georeferencing
+      - href: ex4_Queries.qmd
+        text: Exercise 4. Queries
 
 format:
   html:
