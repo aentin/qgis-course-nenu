@@ -3,7 +3,11 @@ title: "Exercise 4. Queries"
 format: html
 ---
 
-### Objectives
+### Objective
+
+Count the number of buildings of various types in the 'local areas' of the Novosibirsk city 
+
+### Key steps
 
 - Create a new GeoPackage;
 - Digitize local areas;
@@ -63,4 +67,33 @@ For this particular exercise, reprojection is not required: modern QGIS versions
 
 #### Attribute selection
 
+Attribute selection can be performed from the Selection Toolbar. There are two common options: 'Select Features by Value...' and 'Select Features by Expression...'.
+
+![](images/Ex04_Queries/attribute_selection_0.png)
+
+The second instrument ('Select Features by Expression...') offers a more flexible possibility, because it allows you to create and apply SQL-like query. The interface itself is equal to the Field Calculator window (in fact, they are the same in QGIS).
+
+![](images/Ex04_Queries/attribute_selection_1.png)
+
+There are four possible options for selection result:
+
+- Select Features;
+- Add to Current Selection;
+- Remove from Current Selection;
+- Filter from Current Selection.
+
+Choose correct option for your query.
+
+![](images/Ex04_Queries/attribute_selection_2.png)
+
 #### Spatial query
+
+Spatial queries in QGIS are performed via `Vector` – `Research tools` – `Select by Location...`.
+
+![](images/Ex04_Queries/spatial_query_0.png)
+
+Eight possible overlay predicates are available:
+
+![](images/Ex04_Queries/spatial_query_1.png)
+
+There are also four possible options for selection result, just like in attibute selection interface.

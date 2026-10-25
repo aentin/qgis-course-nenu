@@ -144,7 +144,8 @@ ul.task-list li input[type="checkbox"] {
     <h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#objectives" id="toc-objectives" class="nav-link active" data-scroll-target="#objectives">Objectives</a></li>
+  <li><a href="#objective" id="toc-objective" class="nav-link active" data-scroll-target="#objective">Objective</a></li>
+  <li><a href="#key-steps" id="toc-key-steps" class="nav-link" data-scroll-target="#key-steps">Key steps</a></li>
   <li><a href="#screenshots-and-additional-information" id="toc-screenshots-and-additional-information" class="nav-link" data-scroll-target="#screenshots-and-additional-information">Screenshots and additional information</a></li>
   </ul>
 </nav>
@@ -171,8 +172,12 @@ ul.task-list li input[type="checkbox"] {
 </header>
 
 
-<section id="objectives" class="level3">
-<h3 class="anchored" data-anchor-id="objectives">Objectives</h3>
+<section id="objective" class="level3">
+<h3 class="anchored" data-anchor-id="objective">Objective</h3>
+<p>Count the number of buildings of various types in the ‘local areas’ of the Novosibirsk city</p>
+</section>
+<section id="key-steps" class="level3">
+<h3 class="anchored" data-anchor-id="key-steps">Key steps</h3>
 <ul>
 <li>Create a new GeoPackage;</li>
 <li>Digitize local areas;</li>
@@ -224,9 +229,27 @@ ul.task-list li input[type="checkbox"] {
 </section>
 <section id="attribute-selection" class="level4">
 <h4 class="anchored" data-anchor-id="attribute-selection">Attribute selection</h4>
+<p>Attribute selection can be performed from the Selection Toolbar. There are two common options: ‘Select Features by Value…’ and ‘Select Features by Expression…’.</p>
+<p><img src="images/Ex04_Queries/attribute_selection_0.png" class="img-fluid"></p>
+<p>The second instrument (‘Select Features by Expression…’) offers a more flexible possibility, because it allows you to create and apply SQL-like query. The interface itself is equal to the Field Calculator window (in fact, they are the same in QGIS).</p>
+<p><img src="images/Ex04_Queries/attribute_selection_1.png" class="img-fluid"></p>
+<p>There are four possible options for selection result:</p>
+<ul>
+<li>Select Features;</li>
+<li>Add to Current Selection;</li>
+<li>Remove from Current Selection;</li>
+<li>Filter from Current Selection.</li>
+</ul>
+<p>Choose correct option for your query.</p>
+<p><img src="images/Ex04_Queries/attribute_selection_2.png" class="img-fluid"></p>
 </section>
 <section id="spatial-query" class="level4">
 <h4 class="anchored" data-anchor-id="spatial-query">Spatial query</h4>
+<p>Spatial queries in QGIS are performed via <code>Vector</code> – <code>Research tools</code> – <code>Select by Location...</code>.</p>
+<p><img src="images/Ex04_Queries/spatial_query_0.png" class="img-fluid"></p>
+<p>Eight possible overlay predicates are available:</p>
+<p><img src="images/Ex04_Queries/spatial_query_1.png" class="img-fluid"></p>
+<p>There are also four possible options for selection result, just like in attibute selection interface.</p>
 
 
 </section>
