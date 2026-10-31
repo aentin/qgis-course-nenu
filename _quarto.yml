@@ -18,7 +18,8 @@ website:
         text: Exercise 3. Raster Georeferencing
       - href: ex4_Queries.qmd
         text: Exercise 4. Queries
-
+      - href: ex5_VectorOverlay.qmd
+        text: Exercise 5. Vector Overlay
 format:
   html:
     theme:
