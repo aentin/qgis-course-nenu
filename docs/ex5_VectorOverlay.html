@@ -284,6 +284,12 @@ window.Quarto = {
 </section>
 <section id="field-calculator" class="level4">
 <h4 class="anchored" data-anchor-id="field-calculator">Field calculator</h4>
+<p>Field calculator is used to create new fields or modify existing fields by applying an expression. You can open Field Calculator from the Attributes toolbar in the main QGIS window, or from the attribute table toolbar in the attribute table window.</p>
+<p><img src="images/Ex05_VectorOverlay/FieldCalculator_0.png" class="img-fluid"></p>
+<p>At the top of the Field Calculator window, there is a setting to specify where the result should be saved (either in a new field or an existing field). The left third of the window contains a form for entering expressions. In the middle, there is a section listing all available functions, as well as fields and values. The right side of the window features dynamic help. In particular, you can view a list of unique values ​​for a selected field there.</p>
+<p>Enter an expression for the calculation and execute it. When performing a calculation, the layer automatically switches to edit mode; remember to toggle off editing once the calculation is complete.</p>
+<p><img src="images/Ex05_VectorOverlay/FieldCalculator_1.png" class="img-fluid"></p>
+<p>The Field Calculator also allows the use of built-in functions for calculating geometry attributes. In particular, <code>$area</code> functions calculates an ellipsoidal area of the feature.</p>
 
 
 </section>
