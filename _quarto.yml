@@ -20,6 +20,8 @@ website:
         text: Exercise 4. Queries
       - href: ex5_VectorOverlay.qmd
         text: Exercise 5. Vector Overlay
+      - href: ex6_DEMofDifference.qmd
+        text: Exercise 6. DEM of Difference
 format:
   html:
     theme:
