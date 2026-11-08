@@ -134,6 +134,24 @@ ul.task-list li input[type="checkbox"] {
  <span class="menu-text">Exercise 4. Queries</span></a>
   </div>
 </li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./ex5_VectorOverlay.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Exercise 5. Vector Overlay</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./ex6_DEMofDifference.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Exercise 6. DEM of Difference</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./ex7_WeightedOverlay.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Exercise 7. Weighted Overlay</span></a>
+  </div>
+</li>
     </ul>
     </div>
 </nav>
@@ -146,7 +164,18 @@ ul.task-list li input[type="checkbox"] {
   <ul>
   <li><a href="#objectives" id="toc-objectives" class="nav-link active" data-scroll-target="#objectives">Objectives</a></li>
   <li><a href="#key-steps" id="toc-key-steps" class="nav-link" data-scroll-target="#key-steps">Key steps</a></li>
-  <li><a href="#screenshots-and-additional-explanations" id="toc-screenshots-and-additional-explanations" class="nav-link" data-scroll-target="#screenshots-and-additional-explanations">Screenshots and additional explanations</a></li>
+  <li><a href="#screenshots-and-additional-explanations" id="toc-screenshots-and-additional-explanations" class="nav-link" data-scroll-target="#screenshots-and-additional-explanations">Screenshots and additional explanations</a>
+  <ul class="collapse">
+  <li><a href="#create-a-new-user-profile" id="toc-create-a-new-user-profile" class="nav-link" data-scroll-target="#create-a-new-user-profile">Create a new user profile</a></li>
+  <li><a href="#qgis-interface" id="toc-qgis-interface" class="nav-link" data-scroll-target="#qgis-interface">QGIS interface</a></li>
+  <li><a href="#creating-a-project" id="toc-creating-a-project" class="nav-link" data-scroll-target="#creating-a-project">Creating a project</a></li>
+  <li><a href="#add-layers-to-project" id="toc-add-layers-to-project" class="nav-link" data-scroll-target="#add-layers-to-project">Add layers to project</a></li>
+  <li><a href="#manage-vector-layer-symbology" id="toc-manage-vector-layer-symbology" class="nav-link" data-scroll-target="#manage-vector-layer-symbology">Manage vector layer symbology</a></li>
+  <li><a href="#manage-labels" id="toc-manage-labels" class="nav-link" data-scroll-target="#manage-labels">Manage labels</a></li>
+  <li><a href="#change-map-projection" id="toc-change-map-projection" class="nav-link" data-scroll-target="#change-map-projection">Change map projection</a></li>
+  <li><a href="#print-layouts" id="toc-print-layouts" class="nav-link" data-scroll-target="#print-layouts">Print layouts</a></li>
+  <li><a href="#manage-raster-layer-symbology" id="toc-manage-raster-layer-symbology" class="nav-link" data-scroll-target="#manage-raster-layer-symbology">Manage raster layer symbology</a></li>
+  </ul></li>
   <li><a href="#related-pages-from-the-qgis-user-guide" id="toc-related-pages-from-the-qgis-user-guide" class="nav-link" data-scroll-target="#related-pages-from-the-qgis-user-guide">Related pages from the QGIS user guide</a></li>
   <li><a href="#related-pages-from-the-qgis-training-manual" id="toc-related-pages-from-the-qgis-training-manual" class="nav-link" data-scroll-target="#related-pages-from-the-qgis-training-manual">Related pages from the QGIS training manual</a></li>
   </ul>
@@ -174,8 +203,8 @@ ul.task-list li input[type="checkbox"] {
 </header>
 
 
-<section id="objectives" class="level3">
-<h3 class="anchored" data-anchor-id="objectives">Objectives</h3>
+<section id="objectives" class="level2">
+<h2 class="anchored" data-anchor-id="objectives">Objectives</h2>
 <ul>
 <li>QGIS interface;</li>
 <li>vector symbology;</li>
@@ -183,8 +212,8 @@ ul.task-list li input[type="checkbox"] {
 <li>map layout.</li>
 </ul>
 </section>
-<section id="key-steps" class="level3">
-<h3 class="anchored" data-anchor-id="key-steps">Key steps</h3>
+<section id="key-steps" class="level2">
+<h2 class="anchored" data-anchor-id="key-steps">Key steps</h2>
 <ul>
 <li>Create a new user profile;</li>
 <li>Create a new project;</li>
@@ -214,15 +243,15 @@ ul.task-list li input[type="checkbox"] {
 <li>Export layouts to external formats.</li>
 </ul>
 </section>
-<section id="screenshots-and-additional-explanations" class="level3">
-<h3 class="anchored" data-anchor-id="screenshots-and-additional-explanations">Screenshots and additional explanations</h3>
-<section id="creating-a-new-user-profile" class="level4">
-<h4 class="anchored" data-anchor-id="creating-a-new-user-profile">Creating a new user profile</h4>
+<section id="screenshots-and-additional-explanations" class="level2">
+<h2 class="anchored" data-anchor-id="screenshots-and-additional-explanations">Screenshots and additional explanations</h2>
+<section id="create-a-new-user-profile" class="level3">
+<h3 class="anchored" data-anchor-id="create-a-new-user-profile">Create a new user profile</h3>
 <p>User profiles allow for quick switching between settings. Create a new profile and switch its language to English. Your default profile will keep your original language.</p>
 <p><img src="images/Ex01_MapLayout/user_profiles.png" class="img-fluid"></p>
 </section>
-<section id="qgis-interface" class="level4">
-<h4 class="anchored" data-anchor-id="qgis-interface">QGIS interface</h4>
+<section id="qgis-interface" class="level3">
+<h3 class="anchored" data-anchor-id="qgis-interface">QGIS interface</h3>
 <p>Four main elements:</p>
 <ol type="1">
 <li>Map frame (now empty)</li>
@@ -232,12 +261,12 @@ ul.task-list li input[type="checkbox"] {
 </ol>
 <p><img src="images/Ex01_MapLayout/qgis_blank_project.png" class="img-fluid"></p>
 </section>
-<section id="creating-a-project" class="level4">
-<h4 class="anchored" data-anchor-id="creating-a-project">Creating a project</h4>
+<section id="creating-a-project" class="level3">
+<h3 class="anchored" data-anchor-id="creating-a-project">Creating a project</h3>
 <p>Press “Project” – “New” or <code>Ctrl+N</code>. Save project to the location where your data are stored.</p>
 </section>
-<section id="add-layers-to-project" class="level4">
-<h4 class="anchored" data-anchor-id="add-layers-to-project">Add layers to project</h4>
+<section id="add-layers-to-project" class="level3">
+<h3 class="anchored" data-anchor-id="add-layers-to-project">Add layers to project</h3>
 <p>Layers may be added by:</p>
 <ol type="1">
 <li>Drag&amp;drop from Browser panel.</li>
@@ -246,8 +275,8 @@ ul.task-list li input[type="checkbox"] {
 </ol>
 <p><img src="images/Ex01_MapLayout/add_layers.png" class="img-fluid"></p>
 </section>
-<section id="manage-vector-layer-symbology" class="level4">
-<h4 class="anchored" data-anchor-id="manage-vector-layer-symbology">Manage vector layer symbology</h4>
+<section id="manage-vector-layer-symbology" class="level3">
+<h3 class="anchored" data-anchor-id="manage-vector-layer-symbology">Manage vector layer symbology</h3>
 <p>Symbology is set to a layer. To access symbology settings, double click a layer in a “Layers” panel (or press right mouse button and select “Properties”), then find and click “Symbology” on the left side of the Properties window.</p>
 <p><img src="images/Ex01_MapLayout/symbology.png" class="img-fluid"></p>
 <p>You can choose one of the default symbols or create your own by customizing fill, outline and other properties.</p>
@@ -256,14 +285,14 @@ ul.task-list li input[type="checkbox"] {
 <p><img src="images/Ex01_MapLayout/categorized.png" class="img-fluid"></p>
 <p><img src="images/Ex01_MapLayout/stylized.png" class="img-fluid"></p>
 </section>
-<section id="manage-labels" class="level4">
-<h4 class="anchored" data-anchor-id="manage-labels">Manage labels</h4>
+<section id="manage-labels" class="level3">
+<h3 class="anchored" data-anchor-id="manage-labels">Manage labels</h3>
 <p>Labels are usually generated from feature attributes. To access labels settings, double click a layer in a “Layers” panel (or press right mouse button and select “Properties”), then find and click “Labels” on the left side of the Properties window. Change default setting (“No labels”) to “Single labels” to enable label generation</p>
 <p><img src="images/Ex01_MapLayout/label_settings.png" class="img-fluid"></p>
 <p><img src="images/Ex01_MapLayout/label_result.png" class="img-fluid"></p>
 </section>
-<section id="change-map-projection" class="level4">
-<h4 class="anchored" data-anchor-id="change-map-projection">Change map projection</h4>
+<section id="change-map-projection" class="level3">
+<h3 class="anchored" data-anchor-id="change-map-projection">Change map projection</h3>
 <p>To change map projection, press CRS button at the lower-right corner of the screen. Alternatively, go to “Project” — “Properties” — “CRS”.</p>
 <p><img src="images/Ex01_MapLayout/projection.png" class="img-fluid"></p>
 <p><img src="images/Ex01_MapLayout/projection_properties.png" class="img-fluid"></p>
@@ -276,8 +305,8 @@ ul.task-list li input[type="checkbox"] {
 <p>Map window with changed projection will look as follows:</p>
 <p><img src="images/Ex01_MapLayout/projection_changed.png" class="img-fluid"></p>
 </section>
-<section id="print-layouts" class="level4">
-<h4 class="anchored" data-anchor-id="print-layouts">Print layouts</h4>
+<section id="print-layouts" class="level3">
+<h3 class="anchored" data-anchor-id="print-layouts">Print layouts</h3>
 <p>QGIS project supports multiple map layouts.</p>
 <p>To create a print layout, navigate to “Project” – “New print layout” or press <code>Ctrl+P</code>. A small prompt window will appear, enter your layout name here. A new print layout will be opened in a separate window.</p>
 <p><img src="images/Ex01_MapLayout/layout_blank.png" class="img-fluid"></p>
@@ -293,16 +322,16 @@ ul.task-list li input[type="checkbox"] {
 <p>Map layout may be exported to PNG image, SVG or PDF.</p>
 <p>If you have created multiple layouts, they are available from main QGIS window (“Project” – “Layout manager”). Each layout opens in a separate window.</p>
 </section>
-<section id="manage-raster-layer-symbology" class="level4">
-<h4 class="anchored" data-anchor-id="manage-raster-layer-symbology">Manage raster layer symbology</h4>
+<section id="manage-raster-layer-symbology" class="level3">
+<h3 class="anchored" data-anchor-id="manage-raster-layer-symbology">Manage raster layer symbology</h3>
 <p>Raster layer symbology is different from vector symbology. It is also accessible via “Properties” window. Default setting is ‘Singleband gray’, other available variants are ‘Singleband pseudocolor’, ‘Hillshade’ and others.</p>
 <p><img src="images/Ex01_MapLayout/raster_singleband_gray.png" class="img-fluid"></p>
 <p><img src="images/Ex01_MapLayout/raster_singleband_pseudocolor.png" class="img-fluid"></p>
 <p><img src="images/Ex01_MapLayout/raster_hillshade.png" class="img-fluid"></p>
 </section>
 </section>
-<section id="related-pages-from-the-qgis-user-guide" class="level3">
-<h3 class="anchored" data-anchor-id="related-pages-from-the-qgis-user-guide">Related pages from the QGIS user guide</h3>
+<section id="related-pages-from-the-qgis-user-guide" class="level2">
+<h2 class="anchored" data-anchor-id="related-pages-from-the-qgis-user-guide">Related pages from the QGIS user guide</h2>
 <p>Please note that these materials could be: 1) outdated; 2) sometimes inavailable from Russia.</p>
 <ul>
 <li><a href="https://docs.qgis.org/3.44/en/docs/user_manual/introduction/qgis_gui.html">QGIS Graphical user interface</a></li>
@@ -312,8 +341,8 @@ ul.task-list li input[type="checkbox"] {
 <li><a href="https://docs.qgis.org/3.44/en/docs/user_manual/print_layout/index.html">Layout</a></li>
 </ul>
 </section>
-<section id="related-pages-from-the-qgis-training-manual" class="level3">
-<h3 class="anchored" data-anchor-id="related-pages-from-the-qgis-training-manual">Related pages from the QGIS training manual</h3>
+<section id="related-pages-from-the-qgis-training-manual" class="level2">
+<h2 class="anchored" data-anchor-id="related-pages-from-the-qgis-training-manual">Related pages from the QGIS training manual</h2>
 <p>Please note that these materials could be: 1) outdated; 2) sometimes inavailable from Russia.</p>
 <ul>
 <li><a href="https://docs.qgis.org/3.44/en/docs/training_manual/basic_map/index.html">Basic map with vector data</a></li>

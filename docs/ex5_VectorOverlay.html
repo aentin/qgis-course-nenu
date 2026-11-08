@@ -193,7 +193,15 @@ window.Quarto = {
   <ul>
   <li><a href="#objective" id="toc-objective" class="nav-link active" data-scroll-target="#objective">Objective</a></li>
   <li><a href="#task-description" id="toc-task-description" class="nav-link" data-scroll-target="#task-description">Task description</a></li>
-  <li><a href="#screenshots-and-additional-information" id="toc-screenshots-and-additional-information" class="nav-link" data-scroll-target="#screenshots-and-additional-information">Screenshots and additional information</a></li>
+  <li><a href="#screenshots-and-additional-information" id="toc-screenshots-and-additional-information" class="nav-link" data-scroll-target="#screenshots-and-additional-information">Screenshots and additional information</a>
+  <ul class="collapse">
+  <li><a href="#apply-external-layer-style" id="toc-apply-external-layer-style" class="nav-link" data-scroll-target="#apply-external-layer-style">Apply external layer style</a></li>
+  <li><a href="#dissolve-layer" id="toc-dissolve-layer" class="nav-link" data-scroll-target="#dissolve-layer">Dissolve layer</a></li>
+  <li><a href="#intersect-layers" id="toc-intersect-layers" class="nav-link" data-scroll-target="#intersect-layers">Intersect layers</a></li>
+  <li><a href="#geometry-calculation" id="toc-geometry-calculation" class="nav-link" data-scroll-target="#geometry-calculation">Geometry calculation</a></li>
+  <li><a href="#table-join" id="toc-table-join" class="nav-link" data-scroll-target="#table-join">Table join</a></li>
+  <li><a href="#field-calculator" id="toc-field-calculator" class="nav-link" data-scroll-target="#field-calculator">Field calculator</a></li>
+  </ul></li>
   </ul>
 </nav>
     </div>
@@ -219,12 +227,12 @@ window.Quarto = {
 </header>
 
 
-<section id="objective" class="level3">
-<h3 class="anchored" data-anchor-id="objective">Objective</h3>
+<section id="objective" class="level2">
+<h2 class="anchored" data-anchor-id="objective">Objective</h2>
 <p>Calculate unilateral (one-sided) spatial association between soil subtypes and landform types</p>
 </section>
-<section id="task-description" class="level3">
-<h3 class="anchored" data-anchor-id="task-description">Task description</h3>
+<section id="task-description" class="level2">
+<h2 class="anchored" data-anchor-id="task-description">Task description</h2>
 <p>Unilateral spatial association between two spatial datasets <span class="math inline">\(A\)</span> and <span class="math inline">\(B\)</span> is computed as</p>
 <p><span class="math inline">\(\frac{|A \cap B|}{|A|}\)</span></p>
 <p>where <span class="math inline">\(|A \cap B|\)</span> is the area of intersection polygons between <span class="math inline">\(A\)</span> and <span class="math inline">\(B\)</span> entities, and <span class="math inline">\(|A|\)</span> is the area of <span class="math inline">\(A\)</span> entities itself.</p>
@@ -245,10 +253,10 @@ window.Quarto = {
 <li>Calculate spatial association by dividing area #3 by area #1.</li>
 </ol>
 </section>
-<section id="screenshots-and-additional-information" class="level3">
-<h3 class="anchored" data-anchor-id="screenshots-and-additional-information">Screenshots and additional information</h3>
-<section id="apply-external-layer-style" class="level4">
-<h4 class="anchored" data-anchor-id="apply-external-layer-style">Apply external layer style</h4>
+<section id="screenshots-and-additional-information" class="level2">
+<h2 class="anchored" data-anchor-id="screenshots-and-additional-information">Screenshots and additional information</h2>
+<section id="apply-external-layer-style" class="level3">
+<h3 class="anchored" data-anchor-id="apply-external-layer-style">Apply external layer style</h3>
 <p>In ‘Layer Properties’ window, find the button ‘Style’ below, press it and select <code>Load Style...</code> option</p>
 <p><img src="images/Ex05_VectorOverlay/LoadStyle_0.png" class="img-fluid"></p>
 <p>A ‘Database Styles manager’ will be opened. Find a style file (<code>*.qml</code> or <code>*.sld</code>) via <code>Browse</code> button, then select which style categories you want to import. Finally, press <code>Load Style</code></p>
@@ -256,8 +264,8 @@ window.Quarto = {
 <p>In the ‘Layer Properties’ window, press <code>OK</code> or <code>Apply</code> to apply new settings.</p>
 <p><img src="images/Ex05_VectorOverlay/LoadStyle_2.png" class="img-fluid"></p>
 </section>
-<section id="dissolve-layer" class="level4">
-<h4 class="anchored" data-anchor-id="dissolve-layer">Dissolve layer</h4>
+<section id="dissolve-layer" class="level3">
+<h3 class="anchored" data-anchor-id="dissolve-layer">Dissolve layer</h3>
 <p>Dissolve operation allows you to combine all the layer features with the same attribute values (in some field or set of fields) in a single feature. For example, we have ‘SoilSubtypes’ layer with 283 features (rows):</p>
 <p><img src="images/Ex05_VectorOverlay/Dissolve_0.png" class="img-fluid"></p>
 <p>To perform dissolve, run ‘Vector’ – ‘Geoprocessing Tools’ – ‘Dissolve…’</p>
@@ -268,23 +276,23 @@ window.Quarto = {
 <p>Press <code>Run</code> to run the instrument. The result of dissolve operation will contain less features than the input file, because all the features with the same values were combined to a single feature.</p>
 <p><img src="images/Ex05_VectorOverlay/Dissolve_4.png" class="img-fluid"></p>
 </section>
-<section id="intersect-layers" class="level4">
-<h4 class="anchored" data-anchor-id="intersect-layers">Intersect layers</h4>
+<section id="intersect-layers" class="level3">
+<h3 class="anchored" data-anchor-id="intersect-layers">Intersect layers</h3>
 <p>To perform geometric intersection, run run ‘Vector’ – ‘Geoprocessing Tools’ – ‘Intersection…’</p>
 <p><img src="images/Ex05_VectorOverlay/Intersection_0.png" class="img-fluid"></p>
 <p>Set input and overlay layers, optionally set fields to keep.</p>
 <p><img src="images/Ex05_VectorOverlay/Intersection_1.png" class="img-fluid"></p>
 <p>Press <code>Run</code> to run the instrument. Output layer contains a geometric intersection of the input features, and its attribute table condains both attributes from input and overlay layers, if any fields were selected.</p>
 </section>
-<section id="geometry-calculation" class="level4">
-<h4 class="anchored" data-anchor-id="geometry-calculation">Geometry calculation</h4>
+<section id="geometry-calculation" class="level3">
+<h3 class="anchored" data-anchor-id="geometry-calculation">Geometry calculation</h3>
 <p>A simplest way to calculate geometry attributes, such as area or perimeter, is to use ‘Add Geometry Attributes…’ instrument (‘Vector’ – ‘Geometry Tools’ – ‘Add Geometry Attributes…’).</p>
 <p><img src="images/Ex05_VectorOverlay/Geometry_0.png" class="img-fluid"></p>
 <p>This instrument creates a new layer with geometry attributes.</p>
 <p>Another way for calculating geometry attributes is to use Field calculator (see below)</p>
 </section>
-<section id="table-join" class="level4">
-<h4 class="anchored" data-anchor-id="table-join">Table join</h4>
+<section id="table-join" class="level3">
+<h3 class="anchored" data-anchor-id="table-join">Table join</h3>
 <p>To temporary join one table to another, open the target table’s properties and navigate to ‘Joins’ section</p>
 <p><em>Note: a target table in QGIS is the table to which you are temporary joining some fields. The table which you adjoining is called simply ‘join table’</em></p>
 <p>Click green plus button to add a new join. A window called ‘Add Vector Join’ will be opened.</p>
@@ -294,8 +302,8 @@ window.Quarto = {
 <p>After applying the settings, selected fields from the join table will be temporarily added to the target table.</p>
 <p><img src="images/Ex05_VectorOverlay/Join_2.png" class="img-fluid"></p>
 </section>
-<section id="field-calculator" class="level4">
-<h4 class="anchored" data-anchor-id="field-calculator">Field calculator</h4>
+<section id="field-calculator" class="level3">
+<h3 class="anchored" data-anchor-id="field-calculator">Field calculator</h3>
 <p>Field calculator is used to create new fields or modify existing fields by applying an expression. You can open Field Calculator from the Attributes toolbar in the main QGIS window, or from the attribute table toolbar in the attribute table window.</p>
 <p><img src="images/Ex05_VectorOverlay/FieldCalculator_0.png" class="img-fluid"></p>
 <p>At the top of the Field Calculator window, there is a setting to specify where the result should be saved (either in a new field or an existing field). The left third of the window contains a form for entering expressions. In the middle, there is a section listing all available functions, as well as fields and values. The right side of the window features dynamic help. In particular, you can view a list of unique values ​​for a selected field there.</p>

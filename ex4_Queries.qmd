@@ -3,11 +3,11 @@ title: "Exercise 4. Queries"
 format: html
 ---
 
-### Objective
+## Objective
 
 Count the number of buildings of various types in the 'local areas' of the Novosibirsk city 
 
-### Key steps
+## Key steps
 
 - Create a new GeoPackage;
 - Digitize local areas;
@@ -17,9 +17,9 @@ Count the number of buildings of various types in the 'local areas' of the Novos
 - Perform attribute query;
 - Perform spatial query;
 
-### Screenshots and additional information
+## Screenshots and additional information
 
-#### Add a spreadsheet to the QGIS project
+### Add a spreadsheet to the QGIS project
 
 Go to `Data Source Manager` – `Delimited Text`:
 
@@ -33,7 +33,7 @@ Press `Add` to add data to the project. The sheet will be added to the project.
 
 `Delimited Text` interface allows for adding geometries described as point coordinates or WKT.
 
-#### Join tables
+### Join tables
 
 To establish a temporary table join, do the following:
 
@@ -55,7 +55,7 @@ The join is created. You can see the result when opening the target layer attibu
 
 ![](images/Ex04_Queries/join_2.png)
 
-#### Reproject data
+### Reproject data
 
 To reproject vector data, use `Vector` – `Data Management Tools` – `Reproject Layer`.
 
@@ -65,7 +65,7 @@ To reproject vector data, use `Vector` – `Data Management Tools` – `Reprojec
 
 For this particular exercise, reprojection is not required: modern QGIS versions are able to perform spatial queries with different coordinate systems. Reprojection is needed in QGIS when you perform geometric operations between multiple raster or vector layers, or when it is necessary to make measurements and geometric operations in projected coordinate systems.
 
-#### Attribute selection
+### Attribute selection
 
 Attribute selection can be performed from the Selection Toolbar. There are two common options: 'Select Features by Value...' and 'Select Features by Expression...'.
 
@@ -86,7 +86,7 @@ Choose correct option for your query.
 
 ![](images/Ex04_Queries/attribute_selection_2.png)
 
-#### Spatial query
+### Spatial query
 
 Spatial queries in QGIS are performed via `Vector` – `Research tools` – `Select by Location...`.
 

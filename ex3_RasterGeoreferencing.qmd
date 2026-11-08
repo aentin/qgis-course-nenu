@@ -3,25 +3,23 @@ title: "Exercise 2. Raster georeferencing"
 format: html
 ---
 
-### Objectives
+## Objectives
 
 - Raster reference interface;
 - Control points from map;
 - Key in coordinates of control points;
 - Raster georeferencing properties
 
-### Key steps
+## Key steps
 
 - Installing plugins;
 - Georeferencing raster to existing map;
 - Georeferencing raster with direct coordinate key-in;
 - Freehand raster referencing in QGIS.
 
-### Input data for training
+## Screenshots and additional information
 
-### Screenshots and additional information
-
-#### Install plugins
+### Install plugins
 
 To install plugins, navigate to "Plugins" — "Manage and Install Plugins...". You need Internet connection to install plugins from QGIS repository.
 
@@ -33,7 +31,7 @@ Find required plugin in the list of plugins, or start entering its name in "Sear
 
 We need a plugin which is called **NextGIS QuickMapServices**. It allows you to add some publicly available web maps into the project. A few new toolbars or panels can appear in QGIS after the installation. You may close them; turn them on when they are needed.
 
-#### Add web map to QGIS
+### Add web map to QGIS
 
 To add a map, navigate to "Web" — "QuickMapServices" and select a source to add. 
 
@@ -41,7 +39,7 @@ To add a map, navigate to "Web" — "QuickMapServices" and select a source to ad
 
 Web maps are not stored locally, you need an Internet connection for proper work.
 
-#### Raster Georeferencing
+### Raster Georeferencing
 
 Raster (and vector) georeferencing is located in "Layer" — "Georeferencer"
 
@@ -71,7 +69,7 @@ After applying settings, red lines should become relatively small. Check if ther
 
 When all point setting job is done, press `Start Georeferencing` button. A new georeferenced file will be created.
 
-### Related pages from the QGIS training manual
+## Related pages from the QGIS training manual
 
 Please note that these materials could be: 1) outdated; 2) sometimes inavailable from Russia.
 

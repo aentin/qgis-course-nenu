@@ -164,7 +164,14 @@ ul.task-list li input[type="checkbox"] {
   <ul>
   <li><a href="#objective" id="toc-objective" class="nav-link active" data-scroll-target="#objective">Objective</a></li>
   <li><a href="#key-steps" id="toc-key-steps" class="nav-link" data-scroll-target="#key-steps">Key steps</a></li>
-  <li><a href="#screenshots-and-additional-information" id="toc-screenshots-and-additional-information" class="nav-link" data-scroll-target="#screenshots-and-additional-information">Screenshots and additional information</a></li>
+  <li><a href="#screenshots-and-additional-information" id="toc-screenshots-and-additional-information" class="nav-link" data-scroll-target="#screenshots-and-additional-information">Screenshots and additional information</a>
+  <ul class="collapse">
+  <li><a href="#add-a-spreadsheet-to-the-qgis-project" id="toc-add-a-spreadsheet-to-the-qgis-project" class="nav-link" data-scroll-target="#add-a-spreadsheet-to-the-qgis-project">Add a spreadsheet to the QGIS project</a></li>
+  <li><a href="#join-tables" id="toc-join-tables" class="nav-link" data-scroll-target="#join-tables">Join tables</a></li>
+  <li><a href="#reproject-data" id="toc-reproject-data" class="nav-link" data-scroll-target="#reproject-data">Reproject data</a></li>
+  <li><a href="#attribute-selection" id="toc-attribute-selection" class="nav-link" data-scroll-target="#attribute-selection">Attribute selection</a></li>
+  <li><a href="#spatial-query" id="toc-spatial-query" class="nav-link" data-scroll-target="#spatial-query">Spatial query</a></li>
+  </ul></li>
   </ul>
 </nav>
     </div>
@@ -190,12 +197,12 @@ ul.task-list li input[type="checkbox"] {
 </header>
 
 
-<section id="objective" class="level3">
-<h3 class="anchored" data-anchor-id="objective">Objective</h3>
+<section id="objective" class="level2">
+<h2 class="anchored" data-anchor-id="objective">Objective</h2>
 <p>Count the number of buildings of various types in the ‘local areas’ of the Novosibirsk city</p>
 </section>
-<section id="key-steps" class="level3">
-<h3 class="anchored" data-anchor-id="key-steps">Key steps</h3>
+<section id="key-steps" class="level2">
+<h2 class="anchored" data-anchor-id="key-steps">Key steps</h2>
 <ul>
 <li>Create a new GeoPackage;</li>
 <li>Digitize local areas;</li>
@@ -206,10 +213,10 @@ ul.task-list li input[type="checkbox"] {
 <li>Perform spatial query;</li>
 </ul>
 </section>
-<section id="screenshots-and-additional-information" class="level3">
-<h3 class="anchored" data-anchor-id="screenshots-and-additional-information">Screenshots and additional information</h3>
-<section id="add-a-spreadsheet-to-the-qgis-project" class="level4">
-<h4 class="anchored" data-anchor-id="add-a-spreadsheet-to-the-qgis-project">Add a spreadsheet to the QGIS project</h4>
+<section id="screenshots-and-additional-information" class="level2">
+<h2 class="anchored" data-anchor-id="screenshots-and-additional-information">Screenshots and additional information</h2>
+<section id="add-a-spreadsheet-to-the-qgis-project" class="level3">
+<h3 class="anchored" data-anchor-id="add-a-spreadsheet-to-the-qgis-project">Add a spreadsheet to the QGIS project</h3>
 <p>Go to <code>Data Source Manager</code> – <code>Delimited Text</code>:</p>
 <p><img src="images/Ex04_Queries/add_table_0.png" class="img-fluid"></p>
 <p>Browse for a file in the first row. Adjust settings, if necessary. Check if everything is good in the ‘Sample data’ form.</p>
@@ -217,8 +224,8 @@ ul.task-list li input[type="checkbox"] {
 <p>Press <code>Add</code> to add data to the project. The sheet will be added to the project.</p>
 <p><code>Delimited Text</code> interface allows for adding geometries described as point coordinates or WKT.</p>
 </section>
-<section id="join-tables" class="level4">
-<h4 class="anchored" data-anchor-id="join-tables">Join tables</h4>
+<section id="join-tables" class="level3">
+<h3 class="anchored" data-anchor-id="join-tables">Join tables</h3>
 <p>To establish a temporary table join, do the following:</p>
 <ul>
 <li>check if there are key fields suitable for join in both tables (layers);</li>
@@ -238,15 +245,15 @@ ul.task-list li input[type="checkbox"] {
 <p>The join is created. You can see the result when opening the target layer attibute table:</p>
 <p><img src="images/Ex04_Queries/join_2.png" class="img-fluid"></p>
 </section>
-<section id="reproject-data" class="level4">
-<h4 class="anchored" data-anchor-id="reproject-data">Reproject data</h4>
+<section id="reproject-data" class="level3">
+<h3 class="anchored" data-anchor-id="reproject-data">Reproject data</h3>
 <p>To reproject vector data, use <code>Vector</code> – <code>Data Management Tools</code> – <code>Reproject Layer</code>.</p>
 <p><img src="images/Ex04_Queries/reproject_0.png" class="img-fluid"></p>
 <p><img src="images/Ex04_Queries/reproject_1.png" class="img-fluid"></p>
 <p>For this particular exercise, reprojection is not required: modern QGIS versions are able to perform spatial queries with different coordinate systems. Reprojection is needed in QGIS when you perform geometric operations between multiple raster or vector layers, or when it is necessary to make measurements and geometric operations in projected coordinate systems.</p>
 </section>
-<section id="attribute-selection" class="level4">
-<h4 class="anchored" data-anchor-id="attribute-selection">Attribute selection</h4>
+<section id="attribute-selection" class="level3">
+<h3 class="anchored" data-anchor-id="attribute-selection">Attribute selection</h3>
 <p>Attribute selection can be performed from the Selection Toolbar. There are two common options: ‘Select Features by Value…’ and ‘Select Features by Expression…’.</p>
 <p><img src="images/Ex04_Queries/attribute_selection_0.png" class="img-fluid"></p>
 <p>The second instrument (‘Select Features by Expression…’) offers a more flexible possibility, because it allows you to create and apply SQL-like query. The interface itself is equal to the Field Calculator window (in fact, they are the same in QGIS).</p>
@@ -261,8 +268,8 @@ ul.task-list li input[type="checkbox"] {
 <p>Choose correct option for your query.</p>
 <p><img src="images/Ex04_Queries/attribute_selection_2.png" class="img-fluid"></p>
 </section>
-<section id="spatial-query" class="level4">
-<h4 class="anchored" data-anchor-id="spatial-query">Spatial query</h4>
+<section id="spatial-query" class="level3">
+<h3 class="anchored" data-anchor-id="spatial-query">Spatial query</h3>
 <p>Spatial queries in QGIS are performed via <code>Vector</code> – <code>Research tools</code> – <code>Select by Location...</code>.</p>
 <p><img src="images/Ex04_Queries/spatial_query_0.png" class="img-fluid"></p>
 <p>Eight possible overlay predicates are available:</p>

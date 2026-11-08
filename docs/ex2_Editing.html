@@ -134,6 +134,24 @@ ul.task-list li input[type="checkbox"] {
  <span class="menu-text">Exercise 4. Queries</span></a>
   </div>
 </li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./ex5_VectorOverlay.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Exercise 5. Vector Overlay</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./ex6_DEMofDifference.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Exercise 6. DEM of Difference</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./ex7_WeightedOverlay.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Exercise 7. Weighted Overlay</span></a>
+  </div>
+</li>
     </ul>
     </div>
 </nav>
@@ -147,10 +165,17 @@ ul.task-list li input[type="checkbox"] {
   <li><a href="#objectives" id="toc-objectives" class="nav-link active" data-scroll-target="#objectives">Objectives</a></li>
   <li><a href="#key-steps" id="toc-key-steps" class="nav-link" data-scroll-target="#key-steps">Key steps</a></li>
   <li><a href="#input-data-for-training" id="toc-input-data-for-training" class="nav-link" data-scroll-target="#input-data-for-training">Input data for training</a></li>
-  <li><a href="#screenshots-and-additional-information" id="toc-screenshots-and-additional-information" class="nav-link" data-scroll-target="#screenshots-and-additional-information">Screenshots and additional information</a></li>
+  <li><a href="#screenshots-and-additional-information" id="toc-screenshots-and-additional-information" class="nav-link" data-scroll-target="#screenshots-and-additional-information">Screenshots and additional information</a>
+  <ul class="collapse">
+  <li><a href="#create-a-new-geopackage" id="toc-create-a-new-geopackage" class="nav-link" data-scroll-target="#create-a-new-geopackage">Create a new GeoPackage</a></li>
+  <li><a href="#create-a-new-table-in-existing-geopackage" id="toc-create-a-new-table-in-existing-geopackage" class="nav-link" data-scroll-target="#create-a-new-table-in-existing-geopackage">Create a new table in existing GeoPackage</a></li>
+  <li><a href="#creating-and-editing-data" id="toc-creating-and-editing-data" class="nav-link" data-scroll-target="#creating-and-editing-data">Creating and editing data</a></li>
   <li><a href="#topographic-map-symbols" id="toc-topographic-map-symbols" class="nav-link" data-scroll-target="#topographic-map-symbols">Topographic map symbols</a></li>
-  <li><a href="#related-pages-from-the-qgis-user-guide" id="toc-related-pages-from-the-qgis-user-guide" class="nav-link" data-scroll-target="#related-pages-from-the-qgis-user-guide">Related pages from the QGIS user guide</a></li>
+  </ul></li>
+  <li><a href="#related-pages-from-the-qgis-user-guide" id="toc-related-pages-from-the-qgis-user-guide" class="nav-link" data-scroll-target="#related-pages-from-the-qgis-user-guide">Related pages from the QGIS user guide</a>
+  <ul class="collapse">
   <li><a href="#related-pages-from-the-qgis-training-manual" id="toc-related-pages-from-the-qgis-training-manual" class="nav-link" data-scroll-target="#related-pages-from-the-qgis-training-manual">Related pages from the QGIS training manual</a></li>
+  </ul></li>
   </ul>
 </nav>
     </div>
@@ -176,8 +201,8 @@ ul.task-list li input[type="checkbox"] {
 </header>
 
 
-<section id="objectives" class="level3">
-<h3 class="anchored" data-anchor-id="objectives">Objectives</h3>
+<section id="objectives" class="level2">
+<h2 class="anchored" data-anchor-id="objectives">Objectives</h2>
 <ul>
 <li>Create new GeoPackage;</li>
 <li>Create new tables in existing GeoPackage;</li>
@@ -187,8 +212,8 @@ ul.task-list li input[type="checkbox"] {
 <li>modify attributes.</li>
 </ul>
 </section>
-<section id="key-steps" class="level3">
-<h3 class="anchored" data-anchor-id="key-steps">Key steps</h3>
+<section id="key-steps" class="level2">
+<h2 class="anchored" data-anchor-id="key-steps">Key steps</h2>
 <ul>
 <li>Create a GeoPackage file;</li>
 <li>Create a table in a GeoPackage file;</li>
@@ -206,35 +231,34 @@ ul.task-list li input[type="checkbox"] {
 <li>(only if there is time left) Feature annotations.</li>
 </ul>
 </section>
-<section id="input-data-for-training" class="level3">
-<h3 class="anchored" data-anchor-id="input-data-for-training">Input data for training</h3>
+<section id="input-data-for-training" class="level2">
+<h2 class="anchored" data-anchor-id="input-data-for-training">Input data for training</h2>
 <p>A fragment of the Unified Electronic Cartographic Basemap of Russian Federation (rus. Единая электронная картографическая основа, ЕЭКО, officially transliterated as EEKO).</p>
 <p><img src="images/Ex02_Editing/01_EEKO.png" class="img-fluid"></p>
 </section>
-<section id="screenshots-and-additional-information" class="level3">
-<h3 class="anchored" data-anchor-id="screenshots-and-additional-information">Screenshots and additional information</h3>
-<section id="create-a-new-geopackage" class="level4">
-<h4 class="anchored" data-anchor-id="create-a-new-geopackage">Create a new GeoPackage</h4>
+<section id="screenshots-and-additional-information" class="level2">
+<h2 class="anchored" data-anchor-id="screenshots-and-additional-information">Screenshots and additional information</h2>
+<section id="create-a-new-geopackage" class="level3">
+<h3 class="anchored" data-anchor-id="create-a-new-geopackage">Create a new GeoPackage</h3>
 <p>To create a new GeoPackage, toggle <em>New GeoPackage Layer</em> button on the Data Source Manager toolbar, or select “Layer” – “Create Layer…” – “New GeoPackage layer”, or press <code>Ctrl+Shift+N</code>.</p>
 <p><img src="images/Ex02_Editing/02_NewGeoPackage.png" class="img-fluid"></p>
 <p>Enter file name, table name, select geometry type and CRS. In the “New field” block, enter a field name and select its type, then press “Add to Fields list”. Repeat for other required fields.</p>
 </section>
-<section id="create-a-new-table-in-existing-geopackage" class="level4">
-<h4 class="anchored" data-anchor-id="create-a-new-table-in-existing-geopackage">Create a new table in existing GeoPackage</h4>
+<section id="create-a-new-table-in-existing-geopackage" class="level3">
+<h3 class="anchored" data-anchor-id="create-a-new-table-in-existing-geopackage">Create a new table in existing GeoPackage</h3>
 <p>To add a new table into the existing GeoPackage, find it in the Browser panel, then press right mouse button and select “New Table…”</p>
 <p><img src="images/Ex02_Editing/03_NewTable0.png" class="img-fluid"></p>
 <p>The interface for creating a new table contains the same settings as the interface for creating a new database (GeoPackage), but they are organized in a somewhat different way.</p>
 <p><img src="images/Ex02_Editing/04_NewTable1.png" class="img-fluid"></p>
 </section>
-<section id="creating-and-editing-data" class="level4">
-<h4 class="anchored" data-anchor-id="creating-and-editing-data">Creating and editing data</h4>
+<section id="creating-and-editing-data" class="level3">
+<h3 class="anchored" data-anchor-id="creating-and-editing-data">Creating and editing data</h3>
 <p>There are three principal toolbars to create and edit spatial data:</p>
 <ul>
 <li>Digitizing toolbar: <img src="images/Ex02_Editing/05_DigitizingToolbar.png" class="img-fluid"></li>
 <li>Advanced digitizing toolbar: <img src="images/Ex02_Editing/06_AdvancedDigitizingToolbar.png" class="img-fluid"></li>
 <li>Snapping toolbar: <img src="images/Ex02_Editing/07_SnappingToolbar.png" class="img-fluid"></li>
 </ul>
-</section>
 </section>
 <section id="topographic-map-symbols" class="level3">
 <h3 class="anchored" data-anchor-id="topographic-map-symbols">Topographic map symbols</h3>
@@ -309,13 +333,13 @@ ul.task-list li input[type="checkbox"] {
 </ul></li>
 </ul>
 </section>
-<section id="related-pages-from-the-qgis-user-guide" class="level3">
-<h3 class="anchored" data-anchor-id="related-pages-from-the-qgis-user-guide">Related pages from the QGIS user guide</h3>
+</section>
+<section id="related-pages-from-the-qgis-user-guide" class="level2">
+<h2 class="anchored" data-anchor-id="related-pages-from-the-qgis-user-guide">Related pages from the QGIS user guide</h2>
 <p>Please note that these materials could be: 1) outdated; 2) sometimes inavailable from Russia.</p>
 <ul>
 <li><a href="https://docs.qgis.org/4.2/en/docs/user_manual/map_views/map_view.html#feature-annotations">Feature Annotations</a></li>
 </ul>
-</section>
 <section id="related-pages-from-the-qgis-training-manual" class="level3">
 <h3 class="anchored" data-anchor-id="related-pages-from-the-qgis-training-manual">Related pages from the QGIS training manual</h3>
 <p>Please note that these materials could be: 1) outdated; 2) sometimes inavailable from Russia.</p>
@@ -325,6 +349,7 @@ ul.task-list li input[type="checkbox"] {
 </ul>
 
 
+</section>
 </section>
 
 </main> <!-- /main -->

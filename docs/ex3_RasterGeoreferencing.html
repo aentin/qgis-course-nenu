@@ -140,6 +140,18 @@ ul.task-list li input[type="checkbox"] {
  <span class="menu-text">Exercise 5. Vector Overlay</span></a>
   </div>
 </li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./ex6_DEMofDifference.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Exercise 6. DEM of Difference</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./ex7_WeightedOverlay.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Exercise 7. Weighted Overlay</span></a>
+  </div>
+</li>
     </ul>
     </div>
 </nav>
@@ -152,8 +164,12 @@ ul.task-list li input[type="checkbox"] {
   <ul>
   <li><a href="#objectives" id="toc-objectives" class="nav-link active" data-scroll-target="#objectives">Objectives</a></li>
   <li><a href="#key-steps" id="toc-key-steps" class="nav-link" data-scroll-target="#key-steps">Key steps</a></li>
-  <li><a href="#input-data-for-training" id="toc-input-data-for-training" class="nav-link" data-scroll-target="#input-data-for-training">Input data for training</a></li>
-  <li><a href="#screenshots-and-additional-information" id="toc-screenshots-and-additional-information" class="nav-link" data-scroll-target="#screenshots-and-additional-information">Screenshots and additional information</a></li>
+  <li><a href="#screenshots-and-additional-information" id="toc-screenshots-and-additional-information" class="nav-link" data-scroll-target="#screenshots-and-additional-information">Screenshots and additional information</a>
+  <ul class="collapse">
+  <li><a href="#install-plugins" id="toc-install-plugins" class="nav-link" data-scroll-target="#install-plugins">Install plugins</a></li>
+  <li><a href="#add-web-map-to-qgis" id="toc-add-web-map-to-qgis" class="nav-link" data-scroll-target="#add-web-map-to-qgis">Add web map to QGIS</a></li>
+  <li><a href="#raster-georeferencing" id="toc-raster-georeferencing" class="nav-link" data-scroll-target="#raster-georeferencing">Raster Georeferencing</a></li>
+  </ul></li>
   <li><a href="#related-pages-from-the-qgis-training-manual" id="toc-related-pages-from-the-qgis-training-manual" class="nav-link" data-scroll-target="#related-pages-from-the-qgis-training-manual">Related pages from the QGIS training manual</a></li>
   </ul>
 </nav>
@@ -180,8 +196,8 @@ ul.task-list li input[type="checkbox"] {
 </header>
 
 
-<section id="objectives" class="level3">
-<h3 class="anchored" data-anchor-id="objectives">Objectives</h3>
+<section id="objectives" class="level2">
+<h2 class="anchored" data-anchor-id="objectives">Objectives</h2>
 <ul>
 <li>Raster reference interface;</li>
 <li>Control points from map;</li>
@@ -189,8 +205,8 @@ ul.task-list li input[type="checkbox"] {
 <li>Raster georeferencing properties</li>
 </ul>
 </section>
-<section id="key-steps" class="level3">
-<h3 class="anchored" data-anchor-id="key-steps">Key steps</h3>
+<section id="key-steps" class="level2">
+<h2 class="anchored" data-anchor-id="key-steps">Key steps</h2>
 <ul>
 <li>Installing plugins;</li>
 <li>Georeferencing raster to existing map;</li>
@@ -198,27 +214,24 @@ ul.task-list li input[type="checkbox"] {
 <li>Freehand raster referencing in QGIS.</li>
 </ul>
 </section>
-<section id="input-data-for-training" class="level3">
-<h3 class="anchored" data-anchor-id="input-data-for-training">Input data for training</h3>
-</section>
-<section id="screenshots-and-additional-information" class="level3">
-<h3 class="anchored" data-anchor-id="screenshots-and-additional-information">Screenshots and additional information</h3>
-<section id="install-plugins" class="level4">
-<h4 class="anchored" data-anchor-id="install-plugins">Install plugins</h4>
+<section id="screenshots-and-additional-information" class="level2">
+<h2 class="anchored" data-anchor-id="screenshots-and-additional-information">Screenshots and additional information</h2>
+<section id="install-plugins" class="level3">
+<h3 class="anchored" data-anchor-id="install-plugins">Install plugins</h3>
 <p>To install plugins, navigate to “Plugins” — “Manage and Install Plugins…”. You need Internet connection to install plugins from QGIS repository.</p>
 <p><img src="images/Ex03_RasterGeoreferencing/00_InstallPlugins.png" class="img-fluid"></p>
 <p><img src="images/Ex03_RasterGeoreferencing/01_InstallPlugins.png" class="img-fluid"></p>
 <p>Find required plugin in the list of plugins, or start entering its name in “Search…” field at the top of ‘Plugins’ window.</p>
 <p>We need a plugin which is called <strong>NextGIS QuickMapServices</strong>. It allows you to add some publicly available web maps into the project. A few new toolbars or panels can appear in QGIS after the installation. You may close them; turn them on when they are needed.</p>
 </section>
-<section id="add-web-map-to-qgis" class="level4">
-<h4 class="anchored" data-anchor-id="add-web-map-to-qgis">Add web map to QGIS</h4>
+<section id="add-web-map-to-qgis" class="level3">
+<h3 class="anchored" data-anchor-id="add-web-map-to-qgis">Add web map to QGIS</h3>
 <p>To add a map, navigate to “Web” — “QuickMapServices” and select a source to add.</p>
 <p><img src="images/Ex03_RasterGeoreferencing/02_AddWMS.png" class="img-fluid"></p>
 <p>Web maps are not stored locally, you need an Internet connection for proper work.</p>
 </section>
-<section id="raster-georeferencing" class="level4">
-<h4 class="anchored" data-anchor-id="raster-georeferencing">Raster Georeferencing</h4>
+<section id="raster-georeferencing" class="level3">
+<h3 class="anchored" data-anchor-id="raster-georeferencing">Raster Georeferencing</h3>
 <p>Raster (and vector) georeferencing is located in “Layer” — “Georeferencer”</p>
 <p><img src="images/Ex03_RasterGeoreferencing/03_Georeferencer.png" class="img-fluid"></p>
 <p><img src="images/Ex03_RasterGeoreferencing/04_Georeferencer.png" class="img-fluid"></p>
@@ -235,8 +248,8 @@ ul.task-list li input[type="checkbox"] {
 <p>When all point setting job is done, press <code>Start Georeferencing</code> button. A new georeferenced file will be created.</p>
 </section>
 </section>
-<section id="related-pages-from-the-qgis-training-manual" class="level3">
-<h3 class="anchored" data-anchor-id="related-pages-from-the-qgis-training-manual">Related pages from the QGIS training manual</h3>
+<section id="related-pages-from-the-qgis-training-manual" class="level2">
+<h2 class="anchored" data-anchor-id="related-pages-from-the-qgis-training-manual">Related pages from the QGIS training manual</h2>
 <p>Please note that these materials could be: 1) outdated; 2) sometimes inavailable from Russia.</p>
 <ul>
 <li><a href="https://docs.qgis.org/4.2/en/docs/user_manual/managing_data_source/georeferencer.html">QGIS Georeferencer Manual</a></li>

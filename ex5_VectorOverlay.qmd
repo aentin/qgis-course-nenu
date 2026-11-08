@@ -3,11 +3,11 @@ title: "Exercise 5. Vector Overlay"
 format: html
 ---
 
-### Objective
+## Objective
 
 Calculate unilateral (one-sided) spatial association between soil subtypes and landform types
 
-### Task description
+## Task description
 
 Unilateral spatial association between two spatial datasets $A$ and $B$ is computed as
 
@@ -27,9 +27,9 @@ To calculate unilateral spatial association in GIS, you need to:
 4. Join tables two tables with the computed area (1 and 3) by $A$ class field, so all the area values will be combined in a single table.
 5. Calculate spatial association by dividing area #3 by area #1.   
 
-### Screenshots and additional information
+## Screenshots and additional information
 
-#### Apply external layer style
+### Apply external layer style
 
 In 'Layer Properties' window, find the button 'Style' below, press it and select `Load Style...` option
 
@@ -43,7 +43,7 @@ In the 'Layer Properties' window, press `OK` or `Apply` to apply new settings.
 
 ![](images/Ex05_VectorOverlay/LoadStyle_2.png)
 
-#### Dissolve layer
+### Dissolve layer
 
 Dissolve operation allows you to combine all the layer features with the same attribute values (in some field or set of fields) in a single feature. For example, we have 'SoilSubtypes' layer with 283 features (rows):
 
@@ -63,7 +63,7 @@ Press `Run` to run the instrument. The result of dissolve operation will contain
 
 ![](images/Ex05_VectorOverlay/Dissolve_4.png)
 
-#### Intersect layers
+### Intersect layers
 
 To perform geometric intersection, run run 'Vector' – 'Geoprocessing Tools' – 'Intersection...'
 
@@ -75,7 +75,7 @@ Set input and overlay layers, optionally set fields to keep.
 
 Press `Run` to run the instrument. Output layer contains a geometric intersection of the input features, and its attribute table condains both attributes from input and overlay layers, if any fields were selected.
 
-#### Geometry calculation
+### Geometry calculation
 
 A simplest way to calculate geometry attributes, such as area or perimeter, is to use 'Add Geometry Attributes...' instrument ('Vector' – 'Geometry Tools' – 'Add Geometry Attributes...').
 
@@ -85,7 +85,7 @@ This instrument creates a new layer with geometry attributes.
 
 Another way for calculating geometry attributes is to use Field calculator (see below)
 
-#### Table join
+### Table join
 
 To temporary join one table to another, open the target table's properties and navigate to 'Joins' section
 
@@ -103,7 +103,7 @@ After applying the settings, selected fields from the join table will be tempora
 
 ![](images/Ex05_VectorOverlay/Join_2.png)
 
-#### Field calculator
+### Field calculator
 
 Field calculator is used to create new fields or modify existing fields by applying an expression. You can open Field Calculator from the Attributes toolbar in the main QGIS window, or from the attribute table toolbar in the attribute table window.
 

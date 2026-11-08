@@ -2,7 +2,7 @@
 title: "Exercise 2. Creating vector objects"
 ---
 
-### Objectives
+## Objectives
 
 - Create new GeoPackage;
 - Create new tables in existing GeoPackage;
@@ -11,7 +11,7 @@ title: "Exercise 2. Creating vector objects"
 - snapping and tracing;
 - modify attributes.
 
-### Key steps
+## Key steps
 
 - Create a GeoPackage file;
 - Create a table in a GeoPackage file;
@@ -26,15 +26,15 @@ title: "Exercise 2. Creating vector objects"
   - etc.
 - (only if there is time left) Feature annotations.
 
-### Input data for training
+## Input data for training
 
 A fragment of the Unified Electronic Cartographic Basemap of Russian Federation (rus. Единая электронная картографическая основа, ЕЭКО, officially transliterated as EEKO).
 
 ![](images/Ex02_Editing/01_EEKO.png)
 
-### Screenshots and additional information
+## Screenshots and additional information
 
-#### Create a new GeoPackage
+### Create a new GeoPackage
 
 To create a new GeoPackage, toggle *New GeoPackage Layer* button on the Data Source Manager toolbar, or select "Layer" – "Create Layer..." – "New GeoPackage layer", or press `Ctrl+Shift+N`.
 
@@ -42,7 +42,7 @@ To create a new GeoPackage, toggle *New GeoPackage Layer* button on the Data Sou
 
 Enter file name, table name, select geometry type and CRS. In the "New field" block, enter a field name and select its type, then press "Add to Fields list". Repeat for other required fields.
 
-#### Create a new table in existing GeoPackage
+### Create a new table in existing GeoPackage
 
 To add a new table into the existing GeoPackage, find it in the Browser panel, then press right mouse button and select "New Table..."
 
@@ -52,7 +52,7 @@ The interface for creating a new table contains the same settings as the interfa
 
 ![](images/Ex02_Editing/04_NewTable1.png)
 
-#### Creating and editing data
+### Creating and editing data
 
 There are three principal toolbars to create and edit spatial data:
 
@@ -87,7 +87,7 @@ Road characteristics:
   -	A: material (Asphalt)
 
 
-### Related pages from the QGIS user guide
+## Related pages from the QGIS user guide
 
 Please note that these materials could be: 1) outdated; 2) sometimes inavailable from Russia.
 
