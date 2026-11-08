@@ -22,6 +22,8 @@ website:
         text: Exercise 5. Vector Overlay
       - href: ex6_DEMofDifference.qmd
         text: Exercise 6. DEM of Difference
+      - href: ex7_WeightedOverlay.qmd
+        text: Exercise 7. Weighted Overlay
 format:
   html:
     theme:

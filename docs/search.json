@@ -85,5 +85,115 @@
     "crumbs": [
       "Exercise 6. DEM of Difference"
     ]
+  },
+  {
+    "objectID": "ex7_WeightedOverlay.html",
+    "href": "ex7_WeightedOverlay.html",
+    "title": "Exercise 7. Weighted Overlay",
+    "section": "",
+    "text": "Select the optimal location for an industrial site based on a combination of indicators that characterize various factors of suitability.",
+    "crumbs": [
+      "Exercise 7. Weighted Overlay"
+    ]
+  },
+  {
+    "objectID": "ex7_WeightedOverlay.html#local-terrain-slope",
+    "href": "ex7_WeightedOverlay.html#local-terrain-slope",
+    "title": "Exercise 7. Weighted Overlay",
+    "section": "Local terrain slope",
+    "text": "Local terrain slope\nLocal terrain slope is formalized by slope angle. It can be derived from digital elevation model (‘Raster’ – ‘Analysis’ – ‘Slope…’).",
+    "crumbs": [
+      "Exercise 7. Weighted Overlay"
+    ]
+  },
+  {
+    "objectID": "ex7_WeightedOverlay.html#proximity-to-roads",
+    "href": "ex7_WeightedOverlay.html#proximity-to-roads",
+    "title": "Exercise 7. Weighted Overlay",
+    "section": "Proximity to roads",
+    "text": "Proximity to roads\nProximity to roads can be derived from the road network. First, you need to select roads suitable for industrial purposes. Then, you need to convert these roads from vector to raster (‘Raster’ – ‘Conversion’ – ‘Rasterize (Vector to Raster)…’). Note that in QGIS you need to explicitly indicate output raster properties (extent and cell size) for conversion. Finally, you can derive proximity raster from roads raster (‘Raster’ – ‘Analysis’ – ‘Proximity (Raster Distance)…’).",
+    "crumbs": [
+      "Exercise 7. Weighted Overlay"
+    ]
+  },
+  {
+    "objectID": "ex7_WeightedOverlay.html#proximity-to-water",
+    "href": "ex7_WeightedOverlay.html#proximity-to-water",
+    "title": "Exercise 7. Weighted Overlay",
+    "section": "Proximity to water",
+    "text": "Proximity to water\nProximity to water is determined in the same way as proximity to roads. Select the relevant water features, convert them into a raster (don’t forget to set the raster geometry parameters!), and calculate the proximity.",
+    "crumbs": [
+      "Exercise 7. Weighted Overlay"
+    ]
+  },
+  {
+    "objectID": "ex7_WeightedOverlay.html#reclassification",
+    "href": "ex7_WeightedOverlay.html#reclassification",
+    "title": "Exercise 7. Weighted Overlay",
+    "section": "Reclassification",
+    "text": "Reclassification\nSlope angle, proximity to roads and proximity to water should be reclassified for further application in a weighted overlay procedure. To perform reclassification, use",
+    "crumbs": [
+      "Exercise 7. Weighted Overlay"
+    ]
+  },
+  {
+    "objectID": "ex7_WeightedOverlay.html#land-use",
+    "href": "ex7_WeightedOverlay.html#land-use",
+    "title": "Exercise 7. Weighted Overlay",
+    "section": "Land use",
+    "text": "Land use\nLand-use type is a nominal variable, so we directly assign a score for each land type. Scores are listed in the table below:\n\n\n\n#\nLand_type\nScore\n\n\n\n\n1\narable land\n4\n\n\n2\nfarm\n2\n\n\n3\nforest\n3\n\n\n4\nforest clearing\n2\n\n\n5\nforest glade\n5\n\n\n6\ngarden\n2\n\n\n7\nhydrography\n0\n\n\n8\nmeadow\n8\n\n\n9\npasture\n10\n\n\n10\nroads and trails\n1\n\n\n11\nsettlement\n3\n\n\n12\nwetland\n0\n\n\n13\nNo data\n0\n\n\n\nTo assign the score, create a new field and use Field Calculator. There are multiple techniques to assign desired values. For example, you can sequentially select every single land type and then assign scores to the selected features. An alternavie is to use CASE construction:\n\nAfter score assignment, use rasterization instrument (see above) to obtain raster of land type scores",
+    "crumbs": [
+      "Exercise 7. Weighted Overlay"
+    ]
+  },
+  {
+    "objectID": "ex7_WeightedOverlay.html#weighted-overlay",
+    "href": "ex7_WeightedOverlay.html#weighted-overlay",
+    "title": "Exercise 7. Weighted Overlay",
+    "section": "Weighted overlay",
+    "text": "Weighted overlay",
+    "crumbs": [
+      "Exercise 7. Weighted Overlay"
+    ]
+  },
+  {
+    "objectID": "ex7_WeightedOverlay.html#final-parcel-selection",
+    "href": "ex7_WeightedOverlay.html#final-parcel-selection",
+    "title": "Exercise 7. Weighted Overlay",
+    "section": "Final parcel selection",
+    "text": "Final parcel selection",
+    "crumbs": [
+      "Exercise 7. Weighted Overlay"
+    ]
+  },
+  {
+    "objectID": "ex7_WeightedOverlay.html#objective",
+    "href": "ex7_WeightedOverlay.html#objective",
+    "title": "Exercise 7. Weighted Overlay",
+    "section": "",
+    "text": "Select the optimal location for an industrial site based on a combination of indicators that characterize various factors of suitability.",
+    "crumbs": [
+      "Exercise 7. Weighted Overlay"
+    ]
+  },
+  {
+    "objectID": "ex7_WeightedOverlay.html#task-description",
+    "href": "ex7_WeightedOverlay.html#task-description",
+    "title": "Exercise 7. Weighted Overlay",
+    "section": "Task description",
+    "text": "Task description\nIn this work, you will select a site for an industrial facility using spatial data and GIS-analysis. You will consider four factors: local terrain slope, proximity to roads, proximity to water sources, and current land use on the site. Each of these four factors will be represented as an indicator. The indicator values will then be reclassified into scores–except land use, where scores will be assigned directly. After reclassification, you will perform a weighted overlay to obtain a final score. Finally, you select site(s) with the highest score, if its (their) area is large enough for industcial facility placement.\nA scheme of the processing is shown below:",
+    "crumbs": [
+      "Exercise 7. Weighted Overlay"
+    ]
+  },
+  {
+    "objectID": "ex7_WeightedOverlay.html#computation-details-and-screenshots",
+    "href": "ex7_WeightedOverlay.html#computation-details-and-screenshots",
+    "title": "Exercise 7. Weighted Overlay",
+    "section": "Computation details and screenshots",
+    "text": "Computation details and screenshots\n\nLocal terrain slope\nLocal terrain slope is formalized by slope angle. It can be derived from digital elevation model (‘Raster’ – ‘Analysis’ – ‘Slope…’).\n\n\n\n\nProximity to roads\nProximity to roads can be derived from the road network. First, you need to select roads suitable for industrial purposes. Then, you need to convert these roads from vector to raster (‘Raster’ – ‘Conversion’ – ‘Rasterize (Vector to Raster)…’). Note that in QGIS you need to explicitly indicate output raster properties (units, extent, and cell size) for conversion.\n\n\nFinally, you can derive proximity raster from roads raster (‘Raster’ – ‘Analysis’ – ‘Proximity (Raster Distance)…’). Note that the proximity should be derived in map units, not in pixels.\n\n\n\n\nProximity to water\nProximity to water is determined in the same way as proximity to roads. Select the relevant water features, convert them into a raster (don’t forget to set the raster geometry parameters!), and calculate the proximity.\n\n\nReclassification\nSlope angle, proximity to roads and proximity to water should be reclassified for further application in a weighted overlay procedure. To perform reclassification, use Reclassify by table or Reclassify by layer instrument from the Processing toolbox.\n\nReclassify by layer instrument requires a layer (a table) with classification:\n\n\nUse this instrument to reclass proximities (\\(d\\)) in such a way:\n\n0 &lt; \\(d\\) ≤ 100 → 10\n100 &lt; \\(d\\) ≤ 200 → 9\n200 &lt; \\(d\\) ≤ 300 → 8\n300 &lt; \\(d\\) ≤ 400 → 7\n400 &lt; \\(d\\) ≤ 500 → 6\n500 &lt; \\(d\\) ≤ 600 → 5\n600 &lt; \\(d\\) ≤ 700 → 4\n700 &lt; \\(d\\) ≤ 800 → 3\n800 &lt; \\(d\\) ≤ 900 → 2\n900 &lt; \\(d\\) ≤ 1000 → 1\n1000 &lt; \\(d\\) ≤ ∞ → 0\n\nInstead of \\(∞\\), you can use a value that is greater than the maximum proximity in your input rasters.\nReclassify by table instrument allows you to set the table for reclassification as a parameter. Use it to reclass slope angle according to the table below:\n\n\n\n#\nSlope, °\nScore\n\n\n\n\n1\n0–3\n9\n\n\n2\n3–6\n10\n\n\n3\n6–9\n8\n\n\n4\n9–18\n6\n\n\n5\n&gt;18\nNoData\n\n\n\n\n\n\n\nLand use\nLand-use type is a nominal variable, so we directly assign a score for each land type. Scores are listed in the table below:\n\n\n\n#\nLand_type\nScore\n\n\n\n\n1\narable land\n4\n\n\n2\nfarm\n2\n\n\n3\nforest\n3\n\n\n4\nforest clearing\n2\n\n\n5\nforest glade\n5\n\n\n6\ngarden\n2\n\n\n7\nhydrography\n0\n\n\n8\nmeadow\n8\n\n\n9\npasture\n10\n\n\n10\nroads and trails\n1\n\n\n11\nsettlement\n3\n\n\n12\nwetland\n0\n\n\n13\nNo data\n0\n\n\n\nTo assign the score, create a new field and use Field Calculator. There are multiple techniques to assign desired values. For example, you can sequentially select every single land type and then assign scores to the selected features. An alternavie is to use CASE construction:\n\nWhen scores are assignment, use rasterization instrument (see above) to obtain raster of land type scores.\nAfter the conversion, check your output raster coverage. It should look like the image below\n\n\n\nCorrect land type rank raster\n\n\nIf there are too many NoData cells, as displayed below, IT’S A BUG!!!: for some reason, the rasterization tool does not always work correctly with GeoPackage.\n\n\n\nIncorrect land type rank raster\n\n\nIn this case, do the following: export the Land_use_polygon layer to a shapefile, then use that shapefile for the rasterization process.\n\n\nWeighted overlay\nWhen all the classified rasters are ready, perform the weighted overlay. Multiply your ranks with the weights defined below:\n\n\n\n#\nFactor\nWeight, %\n\n\n\n\n1\nSlope\n15\n\n\n2\nRoads\n35\n\n\n3\nWater\n20\n\n\n4\nLand\n30\n\n\n\nThen sum the obtained values ​​and round the result to the nearest whole number.\nAll these operations can be conveniently performed using a single tool: the Raster Calculator. However, this is not the same Raster Calculator tool you are already familiar with. Rather, it is recommended to use a tool from the GDAL library, which can be found in the Processing Toolbox.\n\nIn this instrument, you indicate input rasters with Latin alphabet symbols, such as A, B, C…\n\nThere is a Calculation in gdalnumeric syntax... field where you can write your calculation expression, such as:\nA*0.1 + B*0.2 + C*0.3\nNote that there you can use Python synthax and functions, e.g. round().\nAlso note that this instrument allows you to set output raster type, such as Byte, UInt, Float and so on.\nThe result of weighted overlay is supposed to look like this:\n\n\n\nFinal parcel selection\nAfter you got the weigthed overlay result, convert it to vector polygons (‘Raster’ – ‘Conversion’ – ‘Polygonize (Raster to Vector)…’)\n\n\nOnce you have obtained the vector polygons, use a conditional selection (‘Select by Expression’) to select polygons with the highest rank whose area exceeds the required threshold. For example, here is the result of such a selection using an area threshold of 2 hectares (20 000 sq. m):",
+    "crumbs": [
+      "Exercise 7. Weighted Overlay"
+    ]
   }
 ]
