@@ -3,11 +3,11 @@ title: "Exercise 6. DEM of Difference"
 format: html
 ---
 
-### Objective
+## Objective
 
 Calculate the volume of material erosion and accumulation at the site after a landslide event.
 
-### Task description
+## Task description
 
 If you have two digital elevation models (DEMs) representing the state of the terrain before and after changes, you can calculate elevation difference resulting from these changes; then, by using the sum of these differences and cell size, you can determine the volume of erosion and accumulation. For an accurate calculation, you will need two additional datasets: the outline of the area subject to change ((multi)polygon), and the outline of an area known to remain unchanged ((multi)polygon).
 
@@ -37,9 +37,9 @@ The sequence of actions is shown in the diagram below.
 
 ![](images/Ex06_DEMofDifference/DoD_scheme.drawio.png)
 
-### Screenshots and additional information
+## Screenshots and additional information
 
-#### Raster calculator
+### Raster calculator
 
 There are multiple Raster Calculator instruments in QGIS. A QGIS's own solution can be found in 'Raster' – 'Raster Calculator' 
 
@@ -55,7 +55,7 @@ A few expression examples:
 *  `if ( "A@1"> 0, 1, 0)` – condition evaluation. The resulting raster cell will have $1$ if the raster A's cell value is greater than 0 (condition value is `True`), $0$ otherwise (condition value is `False`).
 * `if ( "A@1"> 0, 1, 0/0)` – the same condition, but the false result will be NoData. Unfortunately, there is no direct operator of NoData assignment in QGIS raster calculator, so we surrogate it with `0/0` expression.
 
-#### Zonal Statictics
+### Zonal Statictics
 
 Zonal Statictics can be found in 'Processing Toolbox' panel. Use text search to find the instrument.
 

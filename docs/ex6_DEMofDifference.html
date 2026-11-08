@@ -193,7 +193,11 @@ window.Quarto = {
   <ul>
   <li><a href="#objective" id="toc-objective" class="nav-link active" data-scroll-target="#objective">Objective</a></li>
   <li><a href="#task-description" id="toc-task-description" class="nav-link" data-scroll-target="#task-description">Task description</a></li>
-  <li><a href="#screenshots-and-additional-information" id="toc-screenshots-and-additional-information" class="nav-link" data-scroll-target="#screenshots-and-additional-information">Screenshots and additional information</a></li>
+  <li><a href="#screenshots-and-additional-information" id="toc-screenshots-and-additional-information" class="nav-link" data-scroll-target="#screenshots-and-additional-information">Screenshots and additional information</a>
+  <ul class="collapse">
+  <li><a href="#raster-calculator" id="toc-raster-calculator" class="nav-link" data-scroll-target="#raster-calculator">Raster calculator</a></li>
+  <li><a href="#zonal-statictics" id="toc-zonal-statictics" class="nav-link" data-scroll-target="#zonal-statictics">Zonal Statictics</a></li>
+  </ul></li>
   </ul>
 </nav>
     </div>
@@ -219,12 +223,12 @@ window.Quarto = {
 </header>
 
 
-<section id="objective" class="level3">
-<h3 class="anchored" data-anchor-id="objective">Objective</h3>
+<section id="objective" class="level2">
+<h2 class="anchored" data-anchor-id="objective">Objective</h2>
 <p>Calculate the volume of material erosion and accumulation at the site after a landslide event.</p>
 </section>
-<section id="task-description" class="level3">
-<h3 class="anchored" data-anchor-id="task-description">Task description</h3>
+<section id="task-description" class="level2">
+<h2 class="anchored" data-anchor-id="task-description">Task description</h2>
 <p>If you have two digital elevation models (DEMs) representing the state of the terrain before and after changes, you can calculate elevation difference resulting from these changes; then, by using the sum of these differences and cell size, you can determine the volume of erosion and accumulation. For an accurate calculation, you will need two additional datasets: the outline of the area subject to change ((multi)polygon), and the outline of an area known to remain unchanged ((multi)polygon).</p>
 <p>To perform the analysis, do the following:</p>
 <ol type="1">
@@ -244,10 +248,10 @@ window.Quarto = {
 <p>The sequence of actions is shown in the diagram below.</p>
 <p><img src="images/Ex06_DEMofDifference/DoD_scheme.drawio.png" class="img-fluid"></p>
 </section>
-<section id="screenshots-and-additional-information" class="level3">
-<h3 class="anchored" data-anchor-id="screenshots-and-additional-information">Screenshots and additional information</h3>
-<section id="raster-calculator" class="level4">
-<h4 class="anchored" data-anchor-id="raster-calculator">Raster calculator</h4>
+<section id="screenshots-and-additional-information" class="level2">
+<h2 class="anchored" data-anchor-id="screenshots-and-additional-information">Screenshots and additional information</h2>
+<section id="raster-calculator" class="level3">
+<h3 class="anchored" data-anchor-id="raster-calculator">Raster calculator</h3>
 <p>There are multiple Raster Calculator instruments in QGIS. A QGIS’s own solution can be found in ‘Raster’ – ‘Raster Calculator’</p>
 <p><img src="images/Ex06_DEMofDifference/RasterCalculator_0.png" class="img-fluid"></p>
 <p>At the upper-left side, there is a list of available rasters. At the upper-right side, you can manage output settings. The bottom part is taken by raster operators and the form to enter the exrpession for calculation.</p>
@@ -259,8 +263,8 @@ window.Quarto = {
 <li><code>if ( "A@1"&gt; 0, 1, 0/0)</code> – the same condition, but the false result will be NoData. Unfortunately, there is no direct operator of NoData assignment in QGIS raster calculator, so we surrogate it with <code>0/0</code> expression.</li>
 </ul>
 </section>
-<section id="zonal-statictics" class="level4">
-<h4 class="anchored" data-anchor-id="zonal-statictics">Zonal Statictics</h4>
+<section id="zonal-statictics" class="level3">
+<h3 class="anchored" data-anchor-id="zonal-statictics">Zonal Statictics</h3>
 <p>Zonal Statictics can be found in ‘Processing Toolbox’ panel. Use text search to find the instrument.</p>
 <p><img src="images/Ex06_DEMofDifference/ZonalStatistics_0.png" class="img-fluid"></p>
 <p>In this instrument, you set input zone layer (polygons or multipolygons), input raster layer, and the band number of the input raster. Also you can choose statistics to calculate and customize field prefix for the calculation result.</p>
