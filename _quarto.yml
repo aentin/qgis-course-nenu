@@ -24,6 +24,9 @@ website:
         text: Exercise 6. DEM of Difference
       - href: ex7_WeightedOverlay.qmd
         text: Exercise 7. Weighted Overlay
+      - href: ex8_NetworkAnalysis.qmd
+        text: Exercise 8. Network Analysis
+        
 format:
   html:
     theme:
