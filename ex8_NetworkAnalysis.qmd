@@ -70,9 +70,11 @@ Cost surface can be calculated with 'Iso-Areas as Cost Surface (from layer)' ins
 
 ![](images/Ex08_NetworkAnalysis/Iso-Areas_0.png)
 
+![](images/Ex08_NetworkAnalysis/Iso-Areas_1.png)
+
 Cost surface is a raster in which each cell contains the travel distance (or time) from the nearest source point to that cell.
 
-![](images/Ex08_NetworkAnalysis/Iso-Areas_1.png)
+![](images/Ex08_NetworkAnalysis/Iso-Areas_2.png)
 
 Cost surface raster can be reclassified, then vectorized to obtain an accessibility zone.
 
