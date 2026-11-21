@@ -9,7 +9,7 @@ Find optimal locations for shops within a selected administrative district of Mo
 
 ## Task description
 
-In this exercise, you will learn the basics of network (transport) modeling in GIS. You have been provided with data on apartments (including their approximate population), road network, and everyday convenience shops in a certain district of Moscow. Using network analysis tools in QGIS, delineate the 10-minute walking distance zone around shops, then calculate the population size within this zone. Next, derive potential locations for shops allocation. These potential locations correspond to buildings of specific classes. When you have points representing potential locations, calculate the origin-destination matrix (OD matrix) from these locations to apartments. Using this matrix and the provided SQL script, determine which locations would offer the best accessibility if shops were to be established there. To ensure that the proposed locations offer better accessibility than the existing ones, delineate walking distance zone again and calculate the population within the new zone.
+In this exercise, you will learn the basics of network (transport) modeling in GIS. You have been provided with data on apartments (including their approximate population), road network, and everyday convenience shops in a certain district of Moscow. Using network analysis tools in QGIS, delineate the 10-minute (600 seconds) walking distance zone around shops, then calculate the population size within this zone. Next, derive potential locations for shops allocation. These potential locations correspond to buildings of specific classes. When you have points representing potential locations, calculate the origin-destination matrix (OD matrix) from these locations to apartments. Using this matrix and the provided SQL script, determine which locations would offer the best accessibility if shops were to be established there. To ensure that the proposed locations offer better accessibility than the existing ones, delineate walking distance zone again and calculate the population within the new zone.
 
 There are several specific aspects to consider when performing these operations. 
 
@@ -39,8 +39,30 @@ Concerning **optimal location determination**:
 
 Optimal location is determined by a greedy algorithm which does not have direct implementation in QGIS. To simulate it, we will first construct an OD matrix (as a representation of the set of all paths) and then apply a specific SQL query to determine the optimal values ​​based on that matrix.
 
+To summarize everything stated above, the workflow for solving the problem looks as follows:
 
-An almost-full scheme of the processing (excluding initial data clipping) is shown below:
+1. Preprocess data:
+    1. Clip data to the area of interest.
+    2. Select pedestrian roads from the roads dataset.
+    3. 'Explode' pedestrian roads.
+2. Estimate existing shops coverage:
+    1. Using initial shops location (point features) and the 'exploded' pedestrian road network, calculate cost surface     (raster), limited by 600 seconds travel time.
+    2. Reclassify cost surface raster to derive binary mask of the 600 sec travel time area.
+    3. Vectorize the mask.
+    4. Select residential buildings (apartments) within the vectorized mask, using attribute and spatial query.
+    5. Summarize population of the selected buildings
+3. Determine new shops location:
+    1. Derive residential buildings (apartments) centroids.
+    2. Derive centroids of the buildings suitable for shops' allocation.
+    3. Calculate OD matrix from potential shops location centroids to apartments' centroids.
+    4. Solve the facility location problem: create a virtual layer with the attached SQL query.
+    5. Copy optimal points' IDs from the virtual layer.
+    6. Select points with copied IDs from the potential allocation centroids.
+4. Estimate potential shops coverage:
+    1. Perform steps from #2 again, but use newly selected shops location.
+5. Compare results.
+
+An almost-full scheme of the workflow (excluding initial data clipping and final comparison) is shown below:
 
 ![](images/Ex08_NetworkAnalysis/Network_analysis_scheme.drawio.png)
 

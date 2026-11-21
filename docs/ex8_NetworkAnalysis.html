@@ -238,7 +238,7 @@ window.Quarto = {
 </section>
 <section id="task-description" class="level2">
 <h2 class="anchored" data-anchor-id="task-description">Task description</h2>
-<p>In this exercise, you will learn the basics of network (transport) modeling in GIS. You have been provided with data on apartments (including their approximate population), road network, and everyday convenience shops in a certain district of Moscow. Using network analysis tools in QGIS, delineate the 10-minute walking distance zone around shops, then calculate the population size within this zone. Next, derive potential locations for shops allocation. These potential locations correspond to buildings of specific classes. When you have points representing potential locations, calculate the origin-destination matrix (OD matrix) from these locations to apartments. Using this matrix and the provided SQL script, determine which locations would offer the best accessibility if shops were to be established there. To ensure that the proposed locations offer better accessibility than the existing ones, delineate walking distance zone again and calculate the population within the new zone.</p>
+<p>In this exercise, you will learn the basics of network (transport) modeling in GIS. You have been provided with data on apartments (including their approximate population), road network, and everyday convenience shops in a certain district of Moscow. Using network analysis tools in QGIS, delineate the 10-minute (600 seconds) walking distance zone around shops, then calculate the population size within this zone. Next, derive potential locations for shops allocation. These potential locations correspond to buildings of specific classes. When you have points representing potential locations, calculate the origin-destination matrix (OD matrix) from these locations to apartments. Using this matrix and the provided SQL script, determine which locations would offer the best accessibility if shops were to be established there. To ensure that the proposed locations offer better accessibility than the existing ones, delineate walking distance zone again and calculate the population within the new zone.</p>
 <p>There are several specific aspects to consider when performing these operations.</p>
 <p>Concerning <strong>all input data</strong>:</p>
 <p>Crop data to the district border before analysis.</p>
@@ -259,7 +259,38 @@ window.Quarto = {
 <p>Calculating the pedestrian accessibility zone will involve several steps. Calculating the pedestrian accessibility zone involves several steps. First, calculate an “Iso-Area as Cost surface” (a coverage raster where each cell represents the distance or travel time from the nearest source to that specific location). Then, reclassify this raster into a binary raster such that all values ​​below the required threshold are assigned a new value of 1, while all other values ​​are set to “NoData”. After that, convert the classified raster into a vector polygon.</p>
 <p>Concerning <strong>optimal location determination</strong>:</p>
 <p>Optimal location is determined by a greedy algorithm which does not have direct implementation in QGIS. To simulate it, we will first construct an OD matrix (as a representation of the set of all paths) and then apply a specific SQL query to determine the optimal values ​​based on that matrix.</p>
-<p>An almost-full scheme of the processing (excluding initial data clipping) is shown below:</p>
+<p>To summarize everything stated above, the workflow for solving the problem looks as follows:</p>
+<ol type="1">
+<li>Preprocess data:
+<ol type="1">
+<li>Clip data to the area of interest.</li>
+<li>Select pedestrian roads from the roads dataset.</li>
+<li>‘Explode’ pedestrian roads.</li>
+</ol></li>
+<li>Estimate existing shops coverage:
+<ol type="1">
+<li>Using initial shops location (point features) and the ‘exploded’ pedestrian road network, calculate cost surface (raster), limited by 600 seconds travel time.</li>
+<li>Reclassify cost surface raster to derive binary mask of the 600 sec travel time area.</li>
+<li>Vectorize the mask.</li>
+<li>Select residential buildings (apartments) within the vectorized mask, using attribute and spatial query.</li>
+<li>Summarize population of the selected buildings</li>
+</ol></li>
+<li>Determine new shops location:
+<ol type="1">
+<li>Derive residential buildings (apartments) centroids.</li>
+<li>Derive centroids of the buildings suitable for shops’ allocation.</li>
+<li>Calculate OD matrix from potential shops location centroids to apartments’ centroids.</li>
+<li>Solve the facility location problem: create a virtual layer with the attached SQL query.</li>
+<li>Copy optimal points’ IDs from the virtual layer.</li>
+<li>Select points with copied IDs from the potential allocation centroids.</li>
+</ol></li>
+<li>Estimate potential shops coverage:
+<ol type="1">
+<li>Perform steps from #2 again, but use newly selected shops location.</li>
+</ol></li>
+<li>Compare results.</li>
+</ol>
+<p>An almost-full scheme of the workflow (excluding initial data clipping and final comparison) is shown below:</p>
 <p><img src="images/Ex08_NetworkAnalysis/Network_analysis_scheme.drawio.png" class="img-fluid"></p>
 </section>
 <section id="required-plugins" class="level2">
